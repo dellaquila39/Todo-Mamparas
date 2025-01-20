@@ -1,11 +1,9 @@
 <template>  
-  <v-app-bar app color="#2196F3" class="white--text" height="80px">
-    <v-avatar title class="logo-avatar" size="60">
-      <img :src="require('../assets/logo.jpg')" alt="Logo de Mi Comercio">
+  <v-app-bar app color="#ffffff" class="white--text" height="200px">
+    <v-avatar title class="logo-avatar" size="200">
+      <img :src="require('@/assets/logos/logo1.jpg')" alt="Logo de Mi Comercio">
     </v-avatar>
-    <v-btn icon class="white--text" @click="$router.go(-1)" title="Atrás">  
-      <v-icon>mdi-arrow-left</v-icon>  
-    </v-btn>  
+
     <v-btn icon href="https://www.instagram.com/" target="_blank" title="Instagram">  
       <v-icon class="instagram-icon" large>mdi-instagram</v-icon>  
     </v-btn>  
@@ -15,14 +13,9 @@
     <v-btn icon href="mailto:info@example.com" target="_blank" title="Email">  
       <v-icon class="email-icon" large>mdi-email-outline</v-icon>  
     </v-btn>  
-
-    <v-spacer></v-spacer>  
-
-    <v-toolbar-items>  
-      <v-btn text class="white--text" @click="goToStartView" title="Inicio">  
-        <v-icon class="home" large>mdi-home</v-icon>  
-      </v-btn>  
-    </v-toolbar-items>  
+    <v-btn icon @click="goToStartView" title="Inicio">  
+      <v-icon class="home" large>mdi-home-roof</v-icon>
+    </v-btn>
   </v-app-bar>  
 </template>  
 
@@ -44,24 +37,34 @@ export default {
   margin-left: 10px;
   border-radius: 50%;
 }
-.v-btn .v-icon:hover {  
-  color: #314c7d;  
-  border-radius: 50%;  
-}  
-
 .whatsapp-icon, .instagram-icon, .email-icon, .home {  
-  color: #fdfefe !important;  
+  color: #000000 !important;  
   border-bottom: none !important;  
   padding: 5px;  
 }  
-
-.whatsapp-icon:hover,  
-.instagram-icon:hover,  
-.email-icon:hover,  
-.home:hover,  
-.v-icon:hover {  
-  transform: translateY(-5px);  
-  box-shadow: 0 4px 12px rgba(49, 76, 125, 0.4);  
+.whatsapp-icon:hover {
+  color: #09ac16 !important;  
+  background-color: #ffffff !important;  
   border-radius: 50%;  
-}  
+  transform: translateY(-5px);
+} 
+.instagram-icon:hover {
+  color: #880181 !important;  
+  background-color: #ffffff !important;  
+  border-radius: 50%;  
+  transform: translateY(-5px);
+} 
+.email-icon:hover {
+  color: #b60808 !important;  
+  background-color: #ffffff !important;  
+  border-radius: 50%;  
+  transform: translateY(-5px);
+} 
+.home:hover {
+  color: #31327d !important;  
+  background-color: #ffffff !important;  
+  border-radius: 50%;  
+  transform: translateY(-5px);
+}
+
 </style>
