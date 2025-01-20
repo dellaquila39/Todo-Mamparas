@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import StartView from '../views/StartView.vue'
+import MainScreen from '../views/MainScreen.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'StartView',
-    component: StartView
+    name: 'MainScreen',
+    component: MainScreen
   },
 
   {
