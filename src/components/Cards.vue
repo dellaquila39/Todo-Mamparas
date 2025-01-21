@@ -1,4 +1,4 @@
-<template>  
+<!-- <template>  
   <div class="container">  
     <v-row>  
       <v-col cols="12" sm="4">  
@@ -90,4 +90,4 @@ n
 .v-btn:hover {  
   background-color: #f7f7f7; /* Color de fondo al pasar el mouse */  
 }
-</style>
+</style> -->
