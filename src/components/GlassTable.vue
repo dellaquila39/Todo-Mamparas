@@ -1,4 +1,4 @@
-<template>  
+<!-- <template>  
   <div class="glass-table-container">
     <v-container class="introduccion"> 
       <h1>Descubre Nuestras Opciones de Vidrio</h1>
@@ -133,4 +133,4 @@ export default {
 .glass-table th {  
   background-color: #f7f7f7;  
 }  
-</style>
+</style> -->
