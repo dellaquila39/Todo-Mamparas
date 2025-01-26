@@ -3,7 +3,7 @@
     <h1 class="text-center modern-title">SERVICIOS</h1>  
     <v-row>  
       <v-col v-for="(service, index) in services" :key="index" cols="12" md="3">  
-        <v-card class="service-card">  
+        <v-card class="service-card" @mouseover="hover = index" @mouseout="hover = -1">  
           <v-card-title class="text-center">  
             <v-icon large class="blue--text">{{ service.icon }}</v-icon>  
           </v-card-title>  
@@ -18,8 +18,8 @@
 </template>  
 
 <script>  
-export default {
-  name: "Service",
+export default {  
+  name: "Service",  
   data() {  
     return {  
       services: [  
@@ -30,8 +30,8 @@ export default {
         },  
         {  
           title: "CORTE A MEDIDA",  
-          description: "Descubre la precisión de nuestro corte a medida para vidrios y mamparas. Tecnología de vanguardia garantiza calidad y precisión en cada corte.",
-          icon: "mdi-ruler-square-compass", 
+          description: "Descubre la precisión de nuestro corte a medida para vidrios y mamparas. Tecnología de vanguardia garantiza calidad y precisión en cada corte.",  
+          icon: "mdi-ruler-square-compass",  
         },  
         {  
           title: "COLOCACIÓN",  
@@ -44,32 +44,53 @@ export default {
           icon: "mdi-refresh",  
         },  
       ],  
+      hover: -1,  
     };  
   },  
 };  
 </script>  
 
-<style scoped>
+<style scoped>  
 .modern-title {  
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Cambia a fuente moderna */  
-  font-weight: bold; /* Pone el texto en negrita */  
-  margin-bottom: 20px; /* Espaciado debajo del título */ 
-  color: rgba(26, 51, 90, 0.918); /* Cambia el color del texto */
-}
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+  font-weight: bold;  
+  margin-bottom: 20px;  
+  color: rgba(26, 51, 90, 0.918);  
+}  
+
 .service-card {  
-  height: 300px; /* Ajusta la altura de todas las tarjetas */  
+  height: 300px;  
   display: flex;  
-  flex-direction: column; /* Para alinear el contenido verticalmente */  
-  justify-content: space-between; /* Distribuye el espacio entre elementos */
-  border-radius: 5%;
-  transition: box-shadow 0.9s  
-} 
+  flex-direction: column;  
+  justify-content: space-between;  
+  border-radius: 5%;  
+  transition: all 0.3s;
+  border: 2px solid #ddd;  
+}  
+
 .service-description {  
-  font-size: 1.1rem; /* Aumenta el tamaño de la fuente de la descripción */  
-  line-height: 1.5; /* Espaciado entre líneas para mejor legibilidad */  
-}    
-  
-.v-card:hover {  
+  font-size: 1.1rem;  
+  line-height: 1.5;  
+}  
+
+.service-card:hover {  
+  transform: scale(1.05);  
   box-shadow: 0 20px 40px rgba(2, 45, 95, 0.637);  
+  background-color: #f7f7f7;  
+}  
+
+.service-card:not(:hover) {  
+  transform: scale(1);  
+  box-shadow: none;  
+  background-color: #fff;  
+}  
+
+.v-icon {  
+  transition: all 0.3s;  
+}  
+
+.v-icon:hover {  
+  transform: scale(1.2);  
+  color: #333;  
 }  
 </style>

@@ -1,6 +1,6 @@
 <template>  
-  <v-app>  
-    <v-app-bar app>  
+  <v-app class="app-web"> 
+    <v-app-bar app v-show="showNavigationBar">  
       <NavigationBar />  
     </v-app-bar>  
 
@@ -28,33 +28,50 @@ import Service from './components/Service.vue';
 export default {  
   name: 'App',  
   components: {  
-    NavigationBar,MainScreen,CallToAction,PhotoCarousel,Service },   
-};  
+    NavigationBar, MainScreen, CallToAction, PhotoCarousel, Service  
+  },  
+  data() {  
+    return {  
+      showNavigationBar: true,  
+      lastScrollPosition: 0,  
+    }  
+  },  
+  mounted() {  
+    window.addEventListener('scroll', this.handleScroll)  
+  },  
+  beforeDestroy() {  
+    window.removeEventListener('scroll', this.handleScroll)  
+  },  
+  methods: {  
+    handleScroll() {  
+      const currentScrollPosition = window.scrollY  
+      if (currentScrollPosition > this.lastScrollPosition) {  
+        this.showNavigationBar = false  
+      } else {  
+        this.showNavigationBar = true  
+      }  
+      this.lastScrollPosition = currentScrollPosition  
+    }  
+  }  
+} 
 </script>
 
 <style>
 
-.startview {  
+
+.mainscreen {  
   margin-bottom: 100px;  
 }  
 
-/* .cards {  
-  margin-bottom: 85px;  
-}   */
-
 .photo-carousel {  
-  margin-bottom: 200px;  
+  margin-bottom: 100px;  
 }  
 
-/* .glass-table {  
-  margin-bottom: 85px;  
-}  */
-
 .service {  
-  margin-bottom: 200px;  
+  margin-bottom: 100px;  
 }
 
 .call-to-action {  
-  margin-bottom: 200px;  
+  margin-bottom: 100px;  
 }
 </style>
