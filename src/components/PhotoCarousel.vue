@@ -85,7 +85,7 @@ export default {
       images2: [  
         {  
           id: 1,  
-          src: 'obra2.jpg',  
+          src: 'fondo3.jpeg',  
           title: 'Título de la obra 6',  
           description: 'Descripción de la obra 6',  
         },  
@@ -93,7 +93,7 @@ export default {
       images3: [  
         {  
           id: 1,  
-          src: 'Mampara3.webp',  
+          src: 'fondo4.jpg',  
           title: 'Título de la obra 11',  
           description: 'Descripción de la obra 11',  
         },  
@@ -126,7 +126,7 @@ export default {
 }  
 
 .card {  
-  background: linear-gradient(to bottom, #011e36fa, #00000085);  
+  background: linear-gradient(to bottom, #4567b7, #1a1d23);  
   padding: 20px; 
   height: 475px; 
   border: 1px solid #ddd;  
