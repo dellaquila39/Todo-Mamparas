@@ -5,7 +5,7 @@
         <div class="card h-100 w-100">  
           <h2 class="card-title">Mamparas de Vidrio</h2>  
           <p class="card-description">Despierta la elegancia en tus espacios con nuestras mamparas de vidrio de alta calidad. Diseñadas para fusionar estilo y funcionalidad, nuestras mamparas te brindan privacidad y sofisticación en cualquier ambiente. Ya sea para puertas, baños o áreas de oficina, nuestras mamparas de vidrio son la opción perfecta para aquellos que buscan combinar la estética con la practicidad.</p>  
-          <button class="card-button">Descubre más</button>  
+          <button class="card-button" @click="goToMamparasView">Descubre más</button>  
         </div>  
       </div>  
       <div class="col-md-6 order-md-2 order-2">  
@@ -101,8 +101,8 @@ export default {
     };  
   },  
   methods: {  
-    verMas() {  
-      
+    goToMamparasView() {  
+      this.$router.push('/mamparas');
     }  
   }  
 };  
