@@ -1,6 +1,6 @@
 <template>  
-  <v-app-bar app color="#ffffff" class="white--text" height="200px">
-    <v-avatar title class="logo-avatar" size="200">
+  <v-app-bar class=".app-container" app color="#ffffff" height="200px">
+    <v-avatar title class="logo-avatar" size="155">
       <img :src="require('@/assets/logos/logo1.jpg')" alt="Logo de Mi Comercio">
     </v-avatar>
 
@@ -35,7 +35,7 @@ export default {
   width: 60px;
   height: 60px;
   margin-left: 10px;
-  border-radius: 50%;
+  border-radius: 0%;
 }
 .whatsapp-icon, .instagram-icon, .email-icon, .home {  
   color: #000000 !important;  
@@ -65,6 +65,25 @@ export default {
   background-color: #ffffff !important;  
   border-radius: 50%;  
   transform: translateY(-5px);
+}
+
+.app-container {  
+  width: 100%;  
+  height: 100vh;  
+  padding: 20px;  
+  margin: 0 auto;  
+}  
+
+@media (max-width: 768px) {  
+  .app-container {  
+    padding: 10px;  
+  }  
+}  
+
+@media (max-width: 480px) {  
+  .app-container {  
+    padding: 5px;  
+  }  
 }
 
 </style>

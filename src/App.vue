@@ -1,5 +1,5 @@
 <template>  
-  <v-app class="app-web"> 
+  <v-app class="app-container"> 
     <v-app-bar app v-show="showNavigationBar">  
       <NavigationBar />  
     </v-app-bar>  
@@ -7,9 +7,7 @@
     <v-main>  
       <MainScreen v-if="$route.path === '/'" class="startview"></MainScreen>
       <PhotoCarousel v-if="$route.path === '/'" class="photo-carousel"></PhotoCarousel>
-      <Service v-if="$route.path === '/'" class="service"></Service> 
-      <Cards v-if="$route.path === '/'" class="cards"></Cards>    
-      <GlassTable v-if="$route.path === '/'" class="glass-table"></GlassTable>  
+      <Service v-if="$route.path === '/'" class="service"></Service>  
       <CallToAction v-if="$route.path === '/'"></CallToAction>  
       <router-view v-else></router-view>  
     </v-main> 
@@ -58,6 +56,24 @@ export default {
 
 <style>
 
+.app-container {  
+  width: 100%;  
+  height: 100vh;  
+  padding: 20px;  
+  margin: 0 auto;  
+}  
+
+@media (max-width: 768px) {  
+  .app-container {  
+    padding: 10px;  
+  }  
+}  
+
+@media (max-width: 480px) {  
+  .app-container {  
+    padding: 5px;  
+  }  
+} 
 
 .mainscreen {  
   margin-bottom: 100px;  

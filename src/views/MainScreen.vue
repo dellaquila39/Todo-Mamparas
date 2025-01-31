@@ -73,5 +73,6 @@ export default {
 
 .btn-whatsapp:hover {  
   background-color: #1DA85F;  
-}  
+}
+  
 </style>
