@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainScreen from '../views/MainScreen.vue'
 import MamparasView from '../modulos/mamparas/MamparasView.vue'
+import BarandasView from '../modulos/barandas/BarandasView.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/mamparas',
     name: 'MamparasView',
     component: MamparasView
+  },
+  {
+    path: '/barandas',
+    name: 'BarandasView',
+    component: BarandasView
   },
 
   {

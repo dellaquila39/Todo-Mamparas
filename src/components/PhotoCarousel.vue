@@ -27,8 +27,7 @@
         <div class="card h-100 w-100">  
           <h2 class="card-title">Barandas de Vidrio</h2>  
           <p class="card-description">Elevar la seguridad y el estilo de tus espacios con nuestras barandas de vidrio. Diseñadas para combinar elegancia y resistencia, nuestras barandas te ofrecen una solución perfecta para escaleras, balcones y áreas de recreación. Nuestras barandas de vidrio no solo proporcionan una barrera de seguridad, sino que también agregan un toque de sofisticación y modernidad a cualquier espacio.</p>  
-          <button class="card-button">Descubre más</button>  
-        </div>  
+          <button class="card-button" @click="goTonBarandasView">Descubre más</button>        </div>  
       </div>  
       <div class="col-md-6 order-md-1 order-2">  
         <v-carousel cycle height="475" hide-delimiters>  
@@ -103,6 +102,9 @@ export default {
   methods: {  
     goToMamparasView() {  
       this.$router.push('/mamparas');
+    },
+    goTonBarandasView() {  
+      this.$router.push('/barandas');
     }  
   }  
 };  

@@ -1,0 +1,157 @@
+/* Configuraciones generales para dispositivos móviles */  
+@media (max-width: 768px) {  
+  .app-web {  
+    font-size: 16px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .v-app-bar {  
+    padding: 10px;  
+    height: 60px;  
+  }  
+  .v-main {  
+    padding: 20px;  
+    height: calc(100vh - 60px);  
+  }  
+}  
+
+/* Configuraciones para dispositivos móviles pequeños (iPhone 5, etc.) */  
+@media (max-width: 480px) {  
+  .app-web {  
+    font-size: 14px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .v-app-bar {  
+    padding: 5px;  
+    height: 50px;  
+  }  
+  .v-main {  
+    padding: 10px;  
+    height: calc(100vh - 50px);  
+  }  
+}  
+
+/* Configuraciones para dispositivos móviles muy pequeños (iPhone 4, etc.) */  
+@media (max-width: 320px) {  
+  .app-web {  
+    font-size: 12px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .v-app-bar {  
+    padding: 2px;  
+    height: 40px;  
+  }  
+  .v-main {  
+    padding: 5px;  
+    height: calc(100vh - 40px);  
+  }  
+}  
+
+/* Configuraciones para tablets */  
+@media (min-width: 768px) and (max-width: 1024px) {  
+  .app-web {  
+    font-size: 18px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .v-app-bar {  
+    padding: 15px;  
+    height: 80px;  
+  }  
+  .v-main {  
+    padding: 30px;  
+    height: calc(100vh - 80px);  
+  }  
+}  
+
+/* Configuraciones para pantallas grandes */  
+@media (min-width: 1024px) {  
+  .app-web {  
+    font-size: 20px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .v-app-bar {  
+    padding: 20px;  
+    height: 100px;  
+  }  
+  .v-main {  
+    padding: 40px;  
+    height: calc(100vh - 100px);  
+  }  
+}  
+
+/* Estilos para los componentes */  
+.mainscreen {  
+  margin-bottom: 100px;  
+  width: 100%;  
+  height: auto;  
+}  
+
+.photo-carousel {  
+  margin-bottom: 100px;  
+  width: 100%;  
+  height: auto;  
+}  
+
+.service {  
+  margin-bottom: 100px;  
+  width: 100%;  
+  height: auto;  
+}  
+
+.call-to-action {  
+  margin-bottom: 100px;  
+  width: 100%;  
+  height: auto;  
+}  
+
+/* Estilos para los componentes en dispositivos móviles */  
+@media (max-width: 768px) {  
+  .mainscreen {  
+    margin-bottom: 50px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .photo-carousel {  
+    margin-bottom: 50px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .service {  
+    margin-bottom: 50px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .call-to-action {  
+    margin-bottom: 50px;  
+    width: 100%;  
+    height: auto;  
+  }  
+}  
+
+/* Estilos para los componentes en dispositivos móviles pequeños */  
+@media (max-width: 480px) {  
+  .mainscreen {  
+    margin-bottom: 20px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .photo-carousel {  
+    margin-bottom: 20px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .service {  
+    margin-bottom: 20px;  
+    width: 100%;  
+    height: auto;  
+  }  
+  .call-to-action {  
+    margin-bottom: 20px;  
+    width: 100%;  
+    height: auto;  
+  }  
+}

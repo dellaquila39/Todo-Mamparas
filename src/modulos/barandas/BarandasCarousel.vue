@@ -3,11 +3,11 @@
     <v-row>  
       <v-col cols="12">  
         <div class="carousel-wrapper">  
-          <div class="card" v-for="(mampara, index) in mamparas" :key="index" :class="{ 'active': index === currentIndex }">  
-            <v-img :src="mampara.imagen" max-width="250" max-height="300" class="mx-auto" contain />   
+          <div class="card" v-for="(baranda, index) in barandas" :key="index" :class="{ 'active': index === currentIndex }">  
+            <v-img :src="baranda.imagen" max-width="250" max-height="300" class="mx-auto" contain />   
             <div class="card-content">  
-              <h2 class="card-title">{{ mampara.titulo }}</h2>  
-              <p class="card-text">{{ mampara.descripcion }}</p>  
+              <h2 class="card-title">{{ baranda.titulo }}</h2>  
+              <p class="card-text">{{ baranda.descripcion }}</p>  
             </div>  
           </div>  
         </div>  
@@ -26,9 +26,9 @@
 
 <script>  
 export default {  
-  name: 'MamparasCarousel',  
+  name: 'BarandasCarousel',  
   props: {  
-    mamparas: {  
+    barandas: {  
       type: Array,  
       required: true  
     }  
@@ -40,10 +40,10 @@ export default {
   },  
   methods: {  
     prevCard() {  
-      this.currentIndex = (this.currentIndex - 1 + this.mamparas.length) % this.mamparas.length  
+      this.currentIndex = (this.currentIndex - 1 + this.barandas.length) % this.barandas.length  
     },  
     nextCard() {  
-      this.currentIndex = (this.currentIndex + 1) % this.mamparas.length  
+      this.currentIndex = (this.currentIndex + 1) % this.barandas.length  
     }  
   }  
 }  
@@ -61,7 +61,7 @@ export default {
   justify-content: center;  
   align-items: center;  
   padding: 20px;  
-  overflow: hidden; 
+  overflow: hidden;  
   margin-bottom: 20px;
 }  
 

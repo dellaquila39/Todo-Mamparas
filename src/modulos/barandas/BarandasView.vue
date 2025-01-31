@@ -1,73 +1,73 @@
 <template>  
-  <v-container fluid class="fondo-mamparas"> 
+  <v-container fluid class="contenedor-barandas">  
     <v-row justify="center" align="center">  
-      <v-col cols="12" md="10" xl="8">  
-        <h1 class="titulo-mamparas">Mamparas</h1>  
-        <p class="subtitulo-mamparas">En esta sección encontrarás las mamparas que tenemos disponibles.</p>  
-        <p class="parrafo-mamparas">Aquí podrás explorar nuestra variedad de mamparas, desde las más elegantes hasta las más funcionales. Nuestro objetivo es brindarte la mejor experiencia de compra en línea.</p>
-        <MamparasCarousel :mamparas="mamparas" />
+      <v-col cols="12" md="10" xl="8">   
+        <h1 class="titulo-barandas">Barandas</h1>  
+        <p class="subtitulo-barandas">En esta sección encontrarás las bsrsndas que tenemos disponibles.</p>  
+        <p class="parrafo-barandas">  
+          Aquí podrás explorar nuestra variedad de barandas, desde las más elegantes hasta las más funcionales.  
+          Nuestro objetivo es brindarte la mejor experiencia de compra en línea.  
+        </p>  
+        <BarandasCarousel :barandas="barandas" />
         <button class="btn-whatsapp">WhatsApp</button>
-      </v-col>
+      </v-col>  
     </v-row>  
   </v-container>  
 </template>  
 
-<script> 
-
-import MamparasCarousel from '@/modulos/mamparas/MamparasCarousel.vue';
+<script>  
+import BarandasCarousel from '@/modulos/barandas/BarandasCarousel.vue';
 
 export default {  
-  name: 'MamparasView', 
+  name: 'BarandasView',  
   components: {  
-    MamparasCarousel,
-  }, 
+    BarandasCarousel  
+  },  
   data() {  
     return {  
-      mamparas: [  
+      barandas: [  
         {  
           titulo: 'Mampara de Vidrio Opacid',  
           descripcion: 'Vidrio translúcido que permite la entrada de luz',  
-          imagen: require('../../assets/cartas/opacid1.png')  
+          imagen: require('../../assets/cartas/opacid1.png'),  
         },  
         {  
           titulo: 'Mampara de Vidrio Oscuro',  
           descripcion: 'Vidrio tintado, reduce la luz y la visibilidad',  
-          imagen: require('../../assets/cartas/oscuro1.jpg')   
-        },
+          imagen: require('../../assets/cartas/oscuro1.jpg'),  
+        },  
         {  
           titulo: 'Mampara de Vidrio Fijo',  
           descripcion: 'Vidrio fijo sin sistema de apertura de facil instalación',  
-          imagen: require('../../assets/cartas/fija1.png')   
-        },
+          imagen: require('../../assets/cartas/fija1.png'),  
+        },  
         {  
           titulo: 'Mampara Corrediza',  
           descripcion: 'Vidrio con sistema deslizante para mayor comodidad',  
-          imagen: require('../../assets/cartas/corrediza1.jpg') 
-        }, 
+          imagen: require('../../assets/cartas/corrediza1.jpg'),  
+        },  
         {  
           titulo: 'Box de Ducha',  
           descripcion: 'Recinto de ducha cerrado de varias medidas',  
-          imagen: require('../../assets/cartas/boxducha1.webp')  
-        },
+          imagen: require('../../assets/cartas/boxducha1.webp'),  
+        },  
         {  
           titulo: 'Mampara Bisagra',  
-          descripcion: 'Mampara de vidrio con sitema de bisagra',  
-          imagen: require('../../assets/cartas/bisagra1.jpg')  
-        },     
-
-      ] 
-
+          descripcion: 'Mampara de vidrio con sistema de bisagra',  
+          imagen: require('../../assets/cartas/bisagra1.jpg'),  
+        },  
+      ],  
     };  
-  }  
-}  
+  },  
+};  
 </script>  
 
 <style scoped>  
-.fondo-mamparas {  
+.contenedor-barandas {  
   background-image: url('../../assets/fondos/fondo2.jpg');  
   background-size: cover;  
-  background-position: center;  
-  display: flex;
+  background-position: center;   
+  display: flex;  
   flex-wrap: wrap;  
   flex-direction: column;  
   justify-content: center;  
@@ -76,16 +76,16 @@ export default {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
 }  
 
-.titulo-mamparas {  
-  color: rgba(241, 240, 240, 0.568);
+.titulo-barandas {  
+  color:rgba(241, 240, 240, 0.568);  
   font-size: 48px;  
   font-weight: bold;  
   margin-bottom: 20px;  
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-  text-align: center; 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+  text-align: center;
 }  
 
-.subtitulo-mamparas {  
+.subtitulo-barandas {  
   font-size: 24px;  
   font-weight: normal;  
   margin-bottom: 20px;  
@@ -93,7 +93,7 @@ export default {
   text-align: center;
 }  
 
-.parrafo-mamparas {  
+.parrafo-barandas {  
   font-size: 18px;  
   font-weight: normal;  
   text-align: center;  
@@ -101,13 +101,12 @@ export default {
   padding: 20px;  
   background-color: rgba(255, 255, 255, 0.1);  
   border-radius: 10px;  
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-  margin: 0 auto;
-  margin-bottom: 20px;
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;  
+  
 }  
 
-.parrafo-mamparas:hover {  
+.parrafo-barandas:hover {  
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);  
   transform: translateY(-10px);  
   transition: all 0.4s ease-in-out;  
@@ -125,6 +124,7 @@ export default {
   margin-top: 20px;
   display: block;
   margin: 0 auto;
+
 }
 .btn-whatsapp:hover {  
   background-color: #1DA85F;  
