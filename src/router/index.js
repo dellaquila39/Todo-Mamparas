@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import MainScreen from '../views/MainScreen.vue'
 import MamparasView from '../modulos/mamparas/MamparasView.vue'
 import BarandasView from '../modulos/barandas/BarandasView.vue'
+import CerramientosView from '../modulos/cerramientos/CerramientosView.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/barandas',
     name: 'BarandasView',
     component: BarandasView
+  },
+  {
+    path: '/cerramientos',
+    name: 'CerramientosView',
+    component: CerramientosView
   },
 
   {
