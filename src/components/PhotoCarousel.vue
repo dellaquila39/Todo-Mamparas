@@ -27,7 +27,7 @@
         <div class="card h-100 w-100">  
           <h2 class="card-title">Barandas de Vidrio</h2>  
           <p class="card-description">Elevar la seguridad y el estilo de tus espacios con nuestras barandas de vidrio. Diseñadas para combinar elegancia y resistencia, nuestras barandas te ofrecen una solución perfecta para escaleras, balcones y áreas de recreación. Nuestras barandas de vidrio no solo proporcionan una barrera de seguridad, sino que también agregan un toque de sofisticación y modernidad a cualquier espacio.</p>  
-          <button class="card-button" @click="goTonBarandasView">Descubre más</button>        </div>  
+          <button class="card-button" @click="goToBarandasView">Descubre más</button>        </div>  
       </div>  
       <div class="col-md-6 order-md-1 order-2">  
         <v-carousel cycle height="475" hide-delimiters>  
@@ -48,7 +48,7 @@
         <div class="card h-100 w-100">  
           <h2 class="card-title">Cerramientos de Vidrio</h2>  
           <p class="card-description">Creá espacios abiertos y luminosos con nuestros cerramientos de vidrio. Diseñados para fusionar la arquitectura con la naturaleza, nuestros cerramientos te brindan una conexión perfecta entre interior y exterior. Ya sea para crear un espacio de trabajo inspirador o un área de descanso relajante, nuestros cerramientos de vidrio son la opción ideal para  embellecer con luz natural todos los espacios</p>  
-          <button class="card-button">Descubre más</button>  
+          <button class="card-button" @click="goToCerramientosView">Descubre más</button>  
         </div>  
       </div>  
       <div class="col-md-6 order-md-2 order-2">  
@@ -103,9 +103,12 @@ export default {
     goToMamparasView() {  
       this.$router.push('/mamparas');
     },
-    goTonBarandasView() {  
+    goToBarandasView() {  
       this.$router.push('/barandas');
-    }  
+    },
+    goToCerramientosView() {  
+      this.$router.push('/cerramientos');
+    },
   }  
 };  
 </script>  

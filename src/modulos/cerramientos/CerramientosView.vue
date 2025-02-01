@@ -1,19 +1,23 @@
 <template>
   <div>
     <!-- Contenedor con la imagen de fondo -->
-    <v-container fluid class="contenedor-barandas">
+    <v-container fluid class="contenedor-cerramientos">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
-          <h1 class="titulo-barandas">Barandas</h1>
-          <p class="subtitulo-barandas">
-            En esta sección, descubrirás nuestra gama completa de Barandas y soluciones disponibles para ti.
+          <h1 class="titulo-cerramientos">Cerramientos</h1>
+          <p class="subtitulo-cerramientos">
+            En esta sección, descubrirás nuestra gama completa de Cerramientos y soluciones disponibles para ti.
           </p>
-          <p class="parrafo-barandas">
-            Aquí, la elegancia se eleva y se convierte en una obra de arte. Visualiza tus barandas de vidrio y balcones ideales, 
-            imagina la libertad de disfrutar del espacio exterior y deja que nuestra experiencia en diseño de barandas te guíe hacia la creación de un espacio que combine seguridad y estilo. 
-            Permítenos envolver tus sentidos en un mundo de claridad y sofisticación.
+          <p class="parrafo-cerramientos">
+            Aquí, la imaginación toma forma y se convierte en realidad. Visualiza tu espacio ideal, 
+            sueña con el futuro y deja que nuestra dedicación al diseño te guíe hacia la creación de un espacio que exprese tu estilo. 
+            Permítenos transportarte a un mundo de armonía y sofisticación.
           </p>
-          <BarandasCarousel :barandas="barandas" />
+
+          <!-- CerramientosCarousel -->
+          <CerramientosCarousel :cerramientos="cerramientos" />
+
+          <!-- Botón de WhatsApp -->
           <button class="btn-whatsapp">WhatsApp</button>
         </v-col>
       </v-row>
@@ -31,18 +35,18 @@
 </template>
 
 <script>
-import BarandasCarousel from "@/modulos/barandas/BarandasCarousel.vue";
+import CerramientosCarousel from "@/modulos/cerramientos/CerramientosCarousel.vue";
 import ContactoView from "../../components/ContactoView.vue";
 
 export default {
-  name: "BarandasView",
+  name: "CerramientosView",
   components: {
-    BarandasCarousel,
+    CerramientosCarousel,
     ContactoView,
   },
   data() {
     return {
-      barandas: [
+      cerramientos: [
         {
           titulo: "Mampara de Vidrio Opacid",
           descripcion: "Vidrio translúcido que permite la entrada de luz",
@@ -70,7 +74,7 @@ export default {
         },
         {
           titulo: "Mampara Bisagra",
-          descripcion: "Mampara de vidrio con sistema de bisagra",
+          descripcion: "Mampara de vidrio con sitema de bisagra",
           imagen: require("../../assets/cartas/bisagra1.jpg"),
         },
       ],
@@ -85,7 +89,7 @@ export default {
 
 <style scoped>
 /* Estilos para el contenedor con la imagen de fondo */
-.contenedor-barandas {
+.contenedor-cerramientos {
   background-image: url("../../assets/fondos/fondo2.jpg");
   background-size: cover;
   background-position: center;
@@ -107,7 +111,7 @@ export default {
   padding-bottom: 50px; /* Espacio adicional debajo de ContactoView */
 }
 
-.titulo-barandas {
+.titulo-cerramientos {
   color: rgba(241, 240, 240, 0.568);
   font-size: 48px;
   font-weight: bold;
@@ -116,7 +120,7 @@ export default {
   text-align: center;
 }
 
-.subtitulo-barandas {
+.subtitulo-cerramientos {
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
@@ -124,7 +128,7 @@ export default {
   text-align: center;
 }
 
-.parrafo-barandas {
+.parrafo-cerramientos {
   font-size: 18px;
   font-weight: normal;
   text-align: center;
@@ -137,7 +141,7 @@ export default {
   margin-bottom: 20px;
 }
 
-.parrafo-barandas:hover {
+.parrafo-cerramientos:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-10px);
   transition: all 0.4s ease-in-out;
