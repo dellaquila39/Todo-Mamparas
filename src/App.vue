@@ -13,6 +13,8 @@
         <PhotoCarousel class="photo-carousel" />
         <Service class="service" />
         <CallToAction />
+        <About />
+        <PhotoGallery />
       </template>
 
       <!-- Otras rutas -->
@@ -27,6 +29,8 @@ import MainScreen from './views/MainScreen.vue';
 import CallToAction from './components/CallToAction.vue';
 import PhotoCarousel from './components/PhotoCarousel.vue';
 import Service from './components/Service.vue';
+import About from './views/About.vue';
+import PhotoGallery from './components/PhotoGallery.vue';
 
 export default {
   name: 'App',
@@ -36,6 +40,8 @@ export default {
     CallToAction,
     PhotoCarousel,
     Service,
+    About,
+    PhotoGallery,
   },
   data() {
     return {
@@ -89,7 +95,9 @@ export default {
 .startview,
 .photo-carousel,
 .service,
-.call-to-action {
+.call-to-action,
+.About,
+.photo-gallery {
   margin-bottom: 100px;
 }
 </style>
