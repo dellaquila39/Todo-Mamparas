@@ -1,18 +1,20 @@
 <template>
   <v-container class="gallery-container">
-    <!-- Título Animado -->
-    <v-row>
+    <!-- Título Animado Mejorado -->
+    <v-row class="title-wrapper">
       <v-col cols="12">
-        <v-hover v-slot="{ hover }">
-          <v-card
-            :class="['gallery-title', { 'zoom-effect': hover }]"
-            :elevation="hover ? 12 : 2"
-          >
-            <v-card-title class="text-h3 text-md-h2 font-weight-bold text-center primary--text">
-              Galeria de Exitos!
-            </v-card-title>
-          </v-card>
-        </v-hover>
+        <div class="animated-title">
+          <v-icon class="decor-icon decor-1">mdi-star-circle</v-icon>
+          <v-icon class="decor-icon decor-2">mdi-sparkles</v-icon>
+          <v-icon class="decor-icon decor-3">mdi-circle-multiple</v-icon>
+          
+          <h1 class="text-h3 text-md-h2 font-weight-bold text-center">
+            <span class="title-text">Galeria de</span>
+            <span class="highlighted-text">Exitos!</span>
+          </h1>
+          
+          <div class="title-line"></div>
+        </div>
       </v-col>
     </v-row>
 
@@ -102,6 +104,7 @@
 import BeforeAfterSlider from './BeforeAfterSlider.vue'
 
 export default {
+  name: 'PhotoGallery',
   components: {
     BeforeAfterSlider
   },
@@ -226,16 +229,103 @@ export default {
 .gallery-container {
   background: linear-gradient(to bottom right, #f8f9fa 0%, #e9ecef 100%);
   padding: 4rem 0;
-}
 
-.gallery-title {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  
-  .zoom-effect {
-    transform: scale(1.02);
+  .title-wrapper {
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+
+    .animated-title {
+      position: relative;
+      padding: 2rem 0;
+      
+      h1 {
+        font-family: 'Poppins', sans-serif !important;
+        letter-spacing: 2px !important;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+      }
+
+      .title-text {
+        color: #2c3e50;
+        display: block;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+
+      .highlighted-text {
+        color: #4a00e0;
+        background: linear-gradient(45deg, #8e2de2, #4a00e0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        position: relative;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60%;
+          height: 3px;
+          background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+          border-radius: 2px;
+        }
+      }
+
+      .title-line {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 4px;
+        background: #4a00e0;
+        border-radius: 2px;
+        opacity: 0.2;
+        z-index: 1;
+      }
+
+      .decor-icon {
+        position: absolute;
+        color: #8e2de2;
+        opacity: 0.4;
+        animation: float 4s infinite ease-in-out;
+        
+        &.decor-1 {
+          top: 10%;
+          left: 15%;
+          font-size: 2rem;
+          animation-delay: 0.2s;
+        }
+        
+        &.decor-2 {
+          top: 60%;
+          right: 20%;
+          font-size: 1.8rem;
+          animation-delay: 0.5s;
+        }
+        
+        &.decor-3 {
+          bottom: 20%;
+          left: 25%;
+          font-size: 1.5rem;
+          animation-delay: 0.8s;
+        }
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(15deg); }
+      }
+    }
+  }
+
+  .cards-wrapper {
+    margin-top: 2rem;
   }
 }
 
@@ -336,9 +426,20 @@ export default {
   .fullscreen-slider {
     height: 60vh;
   }
+
+  .title-wrapper {
+    .animated-title {
+      h1 {
+        font-size: 2rem !important;
+      }
+
+      .decor-icon {
+        display: none;
+      }
+    }
+  }
 }
 </style>
-
 
 
 
