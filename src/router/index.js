@@ -4,6 +4,7 @@ import MainScreen from '../views/MainScreen.vue'
 import MamparasView from '../modulos/mamparas/MamparasView.vue'
 import BarandasView from '../modulos/barandas/BarandasView.vue'
 import CerramientosView from '../modulos/cerramientos/CerramientosView.vue'
+import PhotoGallery from '../components/PhotoGallery.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/cerramientos',
     name: 'CerramientosView',
     component: CerramientosView
+  },
+  {
+    path: '/gallery',
+    name: 'PhotoGallery',
+    component: PhotoGallery
   },
 
   {

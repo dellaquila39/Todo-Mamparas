@@ -14,7 +14,7 @@
         <Service class="service" />
         <CallToAction />
         <About />
-        <PhotoGallery />
+        <GalleryCTA />
       </template>
 
       <!-- Otras rutas -->
@@ -30,7 +30,7 @@ import CallToAction from './components/CallToAction.vue';
 import PhotoCarousel from './components/PhotoCarousel.vue';
 import Service from './components/Service.vue';
 import About from './views/About.vue';
-import PhotoGallery from './components/PhotoGallery.vue';
+import GalleryCTA from './components/GalleryCTA.vue';
 
 export default {
   name: 'App',
@@ -41,7 +41,7 @@ export default {
     PhotoCarousel,
     Service,
     About,
-    PhotoGallery,
+    GalleryCTA,
   },
   data() {
     return {
@@ -97,7 +97,7 @@ export default {
 .service,
 .call-to-action,
 .About,
-.photo-gallery {
+.GalleryCTA {
   margin-bottom: 100px;
 }
 </style>
