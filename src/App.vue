@@ -9,7 +9,7 @@
     <v-main>
       <!-- Ruta principal -->
       <template v-if="$route.path === '/'">
-        <MainScreen class="startview" />
+        <MainScreen class="MainScreen" />
         <PhotoCarousel class="photo-carousel" />
         <Service class="service" />
         <CallToAction />
@@ -92,7 +92,7 @@ export default {
 }
 
 /* Espaciado entre secciones */
-.startview,
+.MainScreen,
 .photo-carousel,
 .service,
 .call-to-action,
