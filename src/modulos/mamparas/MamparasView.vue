@@ -84,9 +84,9 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para el contenedor con la imagen de fondo */
+/* Contenedor con la imagen de fondo */
 .fondo-mamparas {
-  background-image: url("../../assets/fondos/fondo2.jpg");
+  background-image: url("~@/assets/fondos/fondo2.jpg"); /* Ruta corregida */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -98,32 +98,51 @@ export default {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh; /* Asegura que el contenedor ocupe al menos el alto de la pantalla */
   padding-bottom: 50px; /* Espacio adicional debajo del botón de WhatsApp */
+  position: relative;
 }
 
-/* Estilos para el contenedor de ContactoView */
+/* Overlay oscuro para mejorar la legibilidad */
+.fondo-mamparas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Ajusta la opacidad según sea necesario */
+  z-index: 1;
+}
+
+/* Contenedor de ContactoView */
 .contenedor-contacto {
   background-color: #fff; /* Fondo blanco para el componente ContactoView */
   padding-top: 50px; /* Espacio adicional arriba de ContactoView */
   padding-bottom: 50px; /* Espacio adicional debajo de ContactoView */
 }
 
+/* Estilos para el título */
 .titulo-mamparas {
-  color: rgba(241, 240, 240, 0.568);
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
+/* Estilos para el subtítulo */
 .subtitulo-mamparas {
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
+/* Estilos para el párrafo */
 .parrafo-mamparas {
   font-size: 18px;
   font-weight: normal;
@@ -135,6 +154,8 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .parrafo-mamparas:hover {
@@ -143,6 +164,7 @@ export default {
   transition: all 0.4s ease-in-out;
 }
 
+/* Estilos para el botón de WhatsApp */
 .btn-whatsapp {
   background-color: #25d366;
   color: #fff;
@@ -155,23 +177,42 @@ export default {
   margin-top: 20px;
   display: block;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .btn-whatsapp:hover {
   background-color: #1da85f;
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
-  .card {
-    width: 150px;
-    height: 200px;
+  .titulo-mamparas {
+    font-size: 36px;
+  }
+
+  .subtitulo-mamparas {
+    font-size: 20px;
+  }
+
+  .parrafo-mamparas {
+    font-size: 16px;
+    padding: 15px;
   }
 }
 
 @media (max-width: 400px) {
-  .card {
-    width: 100px;
-    height: 150px;
+  .titulo-mamparas {
+    font-size: 28px;
+  }
+
+  .subtitulo-mamparas {
+    font-size: 18px;
+  }
+
+  .parrafo-mamparas {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 </style>

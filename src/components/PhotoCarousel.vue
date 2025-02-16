@@ -1,159 +1,224 @@
 <template>
   <v-container class="photo-carousel">
-    <!-- Primera fila: Mamparas de Vidrio -->
-    <v-row class="mb-12">
-      <v-col cols="12" md="6" order-md="1" order="1">
-        <v-card class="card h-100">
-          <v-card-title class="card-title">Mamparas de Vidrio</v-card-title>
-          <v-card-text class="card-description">
-            Despierta la elegancia en tus espacios con nuestras mamparas de vidrio de alta calidad. Diseñadas para fusionar estilo y funcionalidad, nuestras mamparas te brindan privacidad y sofisticación en cualquier ambiente. Ya sea para puertas, baños o áreas de oficina, nuestras mamparas de vidrio son la opción perfecta para aquellos que buscan combinar la estética con la practicidad.
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="green darken-1" dark @click="goToMamparasView">
-              Descubre más
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="6" order-md="2" order="2">
-        <v-img
-          :src="require('@/assets/trabajo/mampara1.jpg')"
-          alt="Mamparas de Vidrio"
-          class="card-image"
-          height="475"
-          cover
-        ></v-img>
-      </v-col>
-    </v-row>
+    <div 
+      v-for="(section, index) in sections" 
+      :key="index"
+      class="section-container"
+      :class="{ 'reverse-section': index % 2 === 0 }"
+    >
+      <v-card class="section-card">
+        <v-row no-gutters class="align-stretch">
+          <!-- Contenido de Texto -->
+          <v-col cols="12" md="6" class="text-content">
+            <div class="text-wrapper d-flex flex-column justify-center">
+              <div class="decorative-line mx-auto"></div>
+              <h2 class="section-title text-center">{{ section.title }}</h2>
+              <div class="section-description-container">
+                <p class="section-description text-center">{{ section.description }}</p>
+              </div>
+              <div class="text-center">
+                <v-btn
+                  :color="section.color"
+                  class="cta-btn mx-auto"
+                  large
+                  @click="goToView(section.route)"
+                >
+                  <v-icon left>{{ section.icon }}</v-icon>
+                  {{ section.cta }}
+                </v-btn>
+              </div>
+            </div>
+          </v-col>
 
-    <!-- Segunda fila: Barandas de Vidrio -->
-    <v-row class="mb-12">
-      <v-col cols="12" md="6" order-md="2" order="1">
-        <v-card class="card h-100">
-          <v-card-title class="card-title">Barandas de Vidrio</v-card-title>
-          <v-card-text class="card-description">
-            Elevar la seguridad y el estilo de tus espacios con nuestras barandas de vidrio. Diseñadas para combinar elegancia y resistencia, nuestras barandas te ofrecen una solución perfecta para escaleras, balcones y áreas de recreación. Nuestras barandas de vidrio no solo proporcionan una barrera de seguridad, sino que también agregan un toque de sofisticación y modernidad a cualquier espacio.
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="green darken-1" dark @click="goToBarandasView">
-              Descubre más
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="6" order-md="1" order="2">
-        <v-img
-          :src="require('@/assets/trabajo/fondo3.jpeg')"
-          alt="Barandas de Vidrio"
-          class="card-image"
-          height="475"
-          cover
-        ></v-img>
-      </v-col>
-    </v-row>
-
-    <!-- Tercera fila: Cerramientos de Vidrio -->
-    <v-row class="mb-12">
-      <v-col cols="12" md="6" order-md="1" order="1">
-        <v-card class="card h-100">
-          <v-card-title class="card-title">Cerramientos de Vidrio</v-card-title>
-          <v-card-text class="card-description">
-            Creá espacios abiertos y luminosos con nuestros cerramientos de vidrio. Diseñados para fusionar la arquitectura con la naturaleza, nuestros cerramientos te brindan una conexión perfecta entre interior y exterior. Ya sea para crear un espacio de trabajo inspirador o un área de descanso relajante, nuestros cerramientos de vidrio son la opción ideal para embellecer con luz natural todos los espacios.
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="green darken-1" dark @click="goToCerramientosView">
-              Descubre más
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="6" order-md="2" order="2">
-        <v-img
-          :src="require('@/assets/trabajo/fondo4.jpg')"
-          alt="Cerramientos de Vidrio"
-          class="card-image"
-          height="475"
-          cover
-        ></v-img>
-      </v-col>
-    </v-row>
+          <!-- Contenido de Imagen -->
+          <v-col cols="12" md="6" class="image-content pa-0">
+            <v-img
+              :src="section.image"
+              :lazy-src="section.image"
+              aspect-ratio="1.5"
+              cover
+              class="fill-height"
+            >
+              <template #placeholder>
+                <div class="image-preloader"></div>
+              </template>
+            </v-img>
+          </v-col>
+        </v-row>
+      </v-card>
+    </div>
   </v-container>
 </template>
 
 <script>
 export default {
   name: "PhotoCarousel",
-  methods: {
-    goToMamparasView() {
-      this.$router.push("/mamparas");
-    },
-    goToBarandasView() {
-      this.$router.push("/barandas");
-    },
-    goToCerramientosView() {
-      this.$router.push("/cerramientos");
-    },
+  data() {
+    return {
+      sections: [
+        {
+          title: "Mamparas de Vidrio",
+          description: "Despierta la elegancia en tus espacios con nuestras mamparas de vidrio de alta calidad...",
+          image: require('@/assets/trabajo/mampara1.jpg'),
+          icon: "mdi-shower",
+          color: "primary darken-3",  
+          route: "/mamparas",
+          cta: "Explora modelos"
+        },
+        {
+          title: "Barandas de Vidrio",
+          description: "Elevar la seguridad y el estilo de tus espacios con nuestras barandas de vidrio...",
+          image: require('@/assets/trabajo/fondo3.jpeg'),
+          icon: "mdi-blinds-vertical-closed",
+          color: "primary darken-3",
+          route: "/barandas",
+          cta: "Explora modelos"
+        },
+        {
+          title: "Cerramientos de Vidrio",
+          description: "Creá espacios abiertos y luminosos con nuestros cerramientos de vidrio...",
+          image: require('@/assets/trabajo/fondo4.jpg'),
+          icon: "mdi-wall",
+          color: "primary darken-3",
+          route: "/cerramientos",
+          cta: "Explora modelos"
+        },
+        {
+          title: "Espejos",
+          description: "Transformá tus espacios con nuestros espejos y estilos mas modernos...",
+          image: require('@/assets/cartas/espejo.jpg'),
+          icon: "mdi-mirror",
+          color: "primary darken-3",
+          route: "/espejos",
+          cta: "Explora modelos"
+        }
+      ]
+    };
   },
+  methods: {
+    goToView(route) {
+      this.$router.push(route);
+    }
+  }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .photo-carousel {
-  padding: 2rem;
+  padding: 4rem 1rem;
+
+  @media (max-width: 600px) {
+    padding: 2rem 0.5rem;
+  }
 }
 
-.card {
-  background: linear-gradient(to bottom, #4567b7, #1a1d23);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section-container {
+  margin-bottom: 4rem;
+
+  @media (max-width: 960px) {
+    margin-bottom: 2rem;
+  }
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.card-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.card-description {
-  font-size: 1rem;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.card-image {
-  border-radius: 10px;
+.section-card {
+  border-radius: 16px;
   overflow: hidden;
-}
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+  transition: box-shadow 0.3s ease;
 
-/* Estilos responsivos */
-@media (max-width: 960px) {
-  .card-title {
-    font-size: 1.5rem;
-  }
-
-  .card-description {
-    font-size: 0.9rem;
+  &:hover {
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12) !important;
   }
 }
 
-@media (max-width: 600px) {
-  .photo-carousel {
-    padding: 1rem;
+.text-content {
+  .text-wrapper {
+    height: 100%;
+    padding: 2rem;
+
+    @media (min-width: 960px) {
+      padding: 3rem;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.decorative-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2A3B5D 0%, #4A667A 100%);
+  margin: 0 auto 1.5rem auto;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  color: #2A3B5D;
+  margin-bottom: 1rem;
+
+  @media (min-width: 960px) {
+    font-size: 2rem;
+  }
+}
+
+.section-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4A667A;
+  margin: 0 auto 1.5rem;
+  max-width: 600px;
+}
+
+.cta-btn {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 0.8rem 1.8rem !important;
+  transition: transform 0.2s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    transform: translateY(-2px);
   }
 
-  .card-title {
-    font-size: 1.25rem;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.image-content {
+  min-height: 350px;
+
+  .v-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .card-description {
-    font-size: 0.8rem;
+  @media (max-width: 960px) {
+    min-height: 250px;
+  }
+}
+
+.image-preloader {
+  background: #f5f7fa;
+  height: 100%;
+  width: 100%;
+  animation: preloader-fade 1.5s ease-in-out infinite;
+}
+
+@keyframes preloader-fade {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+}
+
+@media (min-width: 960px) {
+  .reverse-section .v-row {
+    flex-direction: row-reverse;
+  }
+
+  .section-card .v-row {
+    min-height: 500px;
   }
 }
 </style>

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <v-parallax :src="backgroundImage" height="600" class="about-banner">
     <v-container>
       <v-row align="center" justify="center">
@@ -15,7 +15,7 @@
             <v-btn color="primary" large class="mt-4" @click="learnMore">
               Conoce Más
             </v-btn>
-            <!-- Iconos de Redes Sociales -->
+            n
             <div class="social-icons mt-6">
               <a href="https://facebook.com" target="_blank" class="social-link">
                 <v-icon class="social-icon">mdi-facebook</v-icon>
@@ -39,12 +39,12 @@ export default {
   name: 'About',
   data() {
     return {
-      backgroundImage: require('@/assets/fondos/about4.jpg'), // Ruta a tu imagen de fondo
+      backgroundImage: require('@/assets/fondos/about4.jpg'), 
     };
   },
   methods: {
     learnMore() {
-      // Lógica para redirigir o mostrar más información
+    
       alert('¡Pronto más información!');
     },
   },
@@ -92,11 +92,11 @@ export default {
   font-weight: bold;
 }
 
-/* Estilos para los iconos de redes sociales */
+
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* Espacio entre los iconos */
+  gap: 1.5rem; 
 }
 
 .social-link {
@@ -104,32 +104,32 @@ export default {
 }
 
 .social-icon {
-  color: rgba(255, 255, 255, 0.8); /* Color blanco con transparencia */
-  font-size: 2rem; /* Tamaño de los iconos */
+  color: rgba(255, 255, 255, 0.8); 
+  font-size: 2rem; 
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icon:hover {
-  color: rgba(255, 255, 255, 1); /* Color blanco sólido al hacer hover */
-  transform: scale(1.1); /* Efecto de escala al hacer hover */
+  color: rgba(255, 255, 255, 1); 
+  transform: scale(1.1); 
 }
 
-/* Ajustes responsive */
+
 @media (max-width: 600px) {
   .glass-card {
     padding: 1rem;
   }
 
   .text-h4 {
-    font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
+    font-size: 1.5rem; 
   }
 
   .text-body-1 {
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño para móviles */
+    font-size: 0.9rem; 
   }
 
   .social-icon {
-    font-size: 1.5rem; /* Tamaño de iconos más pequeño para móviles */
+    font-size: 1.5rem; 
   }
 }
-</style>
+</style> -->
