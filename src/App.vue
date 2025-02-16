@@ -13,8 +13,8 @@
         <PhotoCarousel class="photo-carousel" />
         <Service class="service" />
         <CallToAction />
-        <About />
         <GalleryCTA />
+        <WorkFamily />
       </template>
 
       <!-- Otras rutas -->
@@ -29,8 +29,9 @@ import MainScreen from './views/MainScreen.vue';
 import CallToAction from './components/CallToAction.vue';
 import PhotoCarousel from './components/PhotoCarousel.vue';
 import Service from './components/Service.vue';
-import About from './views/About.vue';
 import GalleryCTA from './components/GalleryCTA.vue';
+import WorkFamily from './components/WorkFamily.vue';
+
 
 export default {
   name: 'App',
@@ -40,8 +41,8 @@ export default {
     CallToAction,
     PhotoCarousel,
     Service,
-    About,
     GalleryCTA,
+    WorkFamily,
   },
   data() {
     return {
@@ -96,8 +97,8 @@ export default {
 .photo-carousel,
 .service,
 .call-to-action,
-.About,
-.GalleryCTA {
+.GalleryCTA
+.WorkFamily {
   margin-bottom: 100px;
 }
 </style>

@@ -1,20 +1,19 @@
 <template>
   <div>
     <!-- Contenedor con la imagen de fondo -->
-    <v-container fluid class="contenedor-cerramientos">
+    <v-container fluid class="fondo-espejos">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
-          <h1 class="titulo-cerramientos">Cerramientos</h1>
-          <p class="subtitulo-cerramientos">
-            En esta sección, descubrirás nuestra gama completa de Cerramientos y soluciones disponibles para ti.
+          <h1 class="titulo-espejos">Espejos</h1>
+          <p class="subtitulo-espejos">
+            En esta sección, descubrirás nuestra gama completa de Espejos y soluciones disponibles para ti.
           </p>
-          <p class="parrafo-cerramientos">
-            Aquí, la imaginación toma forma y se convierte en realidad. Visualiza tu espacio ideal, 
-            sueña con el futuro y deja que nuestra dedicación al diseño te guíe hacia la creación de un espacio que exprese tu estilo. 
-            Permítenos transportarte a un mundo de armonía y sofisticación.
+          <p class="parrafo-espejos">
+            Aquí, el arte se une a la reflexión para crear espejos que no solo capturan tu imagen, sino también tu esencia. Imagina tu espejo ideal, 
+            visualiza cómo transformará tu espacio y permite que nuestra pasión por el diseño te inspire a crear un ambiente que refleje tu estilo único. 
+            Déjanos envolverte en un mundo de sofisticación y elegancia, donde cada detalle se convierte en un reflejo de tu personalidad.
           </p>
-
-          <CerramientosCarousel :cerramientos="cerramientos" />
+          <EspejosCarousel :espejos="espejos" />
           <button class="btn-whatsapp">WhatsApp</button>
         </v-col>
       </v-row>
@@ -32,42 +31,47 @@
 </template>
 
 <script>
-import CerramientosCarousel from "@/modulos/cerramientos/CerramientosCarousel.vue";
+import EspejosCarousel from "./EspejosCarousel.vue";
 import ContactoView from "../../components/ContactoView.vue";
 
 export default {
-  name: "CerramientosView",
+  name: "EspejosView",
   components: {
-    CerramientosCarousel,
+    EspejosCarousel,
     ContactoView,
   },
   data() {
     return {
-      cerramientos: [
+      espejos: [
         {
-          titulo: "Cerramientos Corredizos",
-          descripcion: "Paneles de vidrio que se deslizan horizontalmente sobre rieles.",
-          imagen: require("../../assets/cerramientos/corredizo.png"),
+          titulo: "Espejo Empotrado",
+          descripcion: "Espejos que se instalan directamente en la pared, sin protuberancias, creando un aspecto limpio y minimalista.",
+          imagen: require("../../assets/espejos/empotrado.png"),
         },
         {
-          titulo: "Cerramientos Fijos",
-          descripcion: "Paneles de vidrio que no se abren, utilizados principalmente para dividir espacios",
-          imagen: require("../../assets/cerramientos/fijos.jpg"),
+          titulo: "Espejo con Luz Led",
+          descripcion: "Proporcionan iluminación funcional y estética, ideal para generar ambientes modernos",
+          imagen: require("../../assets/espejos/luminoso.jpg"),
         },
         {
-          titulo: "Cerramientos Mixtos",
-          descripcion: "Combinan vidrio con otros materiales como aluminio o madera, ofreciendo lo mejor de ambos mundos.",
-          imagen: require("../../assets/cerramientos/mixto.jpg"),
+          titulo: "Espejo con Marco",
+          descripcion: "Añaden un toque estético y pueden adaptarse a diferentes estilos (moderno, rústico, vintage, etc.).",
+          imagen: require("../../assets/espejos/marco-diseño.jpg"),
         },
         {
-          titulo: "Cerramientos con Cierre Multipunto",
-          descripcion: "Sistemas de cerramiento que incluyen múltiples puntos de bloqueo para mayor seguridad y aislamiento.",
-          imagen: require("../../assets/cerramientos/multipunto.jpg"),
+          titulo: "Espejo Decorativo",
+          descripcion: "Espejos con formas no convencionales (redondos, ovalados, hexagonales, etc.) o diseños artísticos.",
+          imagen: require("../../assets/espejos/forma.jpg"),
         },
         {
-          titulo: "Cerramientos Plegables",
-          descripcion: "Compuestos por paneles de vidrio que se pliegan sobre sí mismos, estos cerramientos permiten abrir completamente un espacio.",
-          imagen: require("../../assets/cerramientos/plegable (2).jpg"),
+          titulo: "Espejo de Pared Completa",
+          descripcion: "Espejos grandes que cubren toda una pared, creando un efecto visual impactante.",
+          imagen: require("../../assets/espejos/espejo-grande.webp"),
+        },
+        {
+          titulo: "Espejo de Cuerpo Entero",
+          descripcion: "Espejos largos que permiten verse de pies a cabeza, Ideales para vestidoresn.",
+          imagen: require("../../assets/espejos/cuerpo-entero.png"),
         },
       ],
     };
@@ -80,7 +84,7 @@ export default {
 
 <style scoped>
 /* Contenedor principal */
-.contenedor-cerramientos {
+.fondo-espejos {
   background-image: url('~@/assets/fondos/fondo2.jpg');
   background-size: cover;
   background-position: center;
@@ -96,7 +100,7 @@ export default {
 }
 
 /* Overlay oscuro */
-.contenedor-cerramientos::before {
+.fondo-espejos::before {
   content: "";
   position: absolute;
   top: 0;
@@ -113,7 +117,7 @@ export default {
 }
 
 /* Textos */
-.titulo-cerramientos {
+.titulo-espejos {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -123,7 +127,7 @@ export default {
   z-index: 2;
 }
 
-.subtitulo-cerramientos {
+.subtitulo-espejos {
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
@@ -133,8 +137,9 @@ export default {
   z-index: 2;
 }
 
-.parrafo-cerramientos {
+.parrafo-espejos {
   font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
   max-width: 600px;
   padding: 20px;
   margin: 0 auto 20px;
@@ -145,7 +150,7 @@ export default {
   z-index: 2;
 }
 
-.parrafo-cerramientos:hover {
+.parrafo-espejos:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-10px);
   transition: all 0.4s ease-in-out;
@@ -173,30 +178,30 @@ export default {
 
 /* Responsive */
 @media (max-width: 600px) {
-  .titulo-cerramientos {
+  .titulo-espejos {
     font-size: 36px;
   }
   
-  .subtitulo-cerramientos {
+  .subtitulo-espejos {
     font-size: 20px;
   }
   
-  .parrafo-cerramientos {
+  .parrafo-espejos {
     font-size: 16px;
     padding: 15px;
   }
 }
 
 @media (max-width: 400px) {
-  .titulo-cerramientos {
+  .titulo-espejos {
     font-size: 28px;
   }
   
-  .subtitulo-cerramientos {
+  .subtitulo-espejos {
     font-size: 18px;
   }
   
-  .parrafo-cerramientos {
+  .parrafo-espejos {
     font-size: 14px;
     padding: 10px;
   }

@@ -4,7 +4,7 @@
       <img :src="require('@/assets/logos/logo1.jpg')" alt="Logo de Mi Comercio">
     </v-avatar>
 
-    <v-btn icon href="https://www.instagram.com/" target="_blank" title="Instagram">  
+    <v-btn icon href="https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy" target="_blank" title="Instagram">  
       <v-icon class="instagram-icon" large>mdi-instagram</v-icon>  
     </v-btn>  
     <v-btn icon href="https://w.app/uvoxGO" target="_blank" title="Whatsapp">  

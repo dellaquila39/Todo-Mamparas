@@ -44,49 +44,43 @@ export default {
     return {
       barandas: [
         {
-          titulo: "Mampara de Vidrio Opacid",
-          descripcion: "Vidrio translúcido que permite la entrada de luz",
-          imagen: require("../../assets/cartas/opacid1.png"),
+          titulo: "Baranda de Vidrio Sin Marco",
+          descripcion: "Diseño minimalista y moderno, Máxima transparencia.",
+          imagen: require("../../assets/cartas/baranda1.png"),
         },
         {
-          titulo: "Mampara de Vidrio Oscuro",
-          descripcion: "Vidrio tintado, reduce la luz y la visibilidad",
-          imagen: require("../../assets/cartas/oscuro1.jpg"),
+          titulo: "Baranda con Perfil de Aluminio",
+          descripcion: "Vidrio insertado en perfiles de aluminio para mayor resistencia.",
+          imagen: require("../../assets/cartas/baranda2.png"),
         },
         {
-          titulo: "Mampara de Vidrio Fijo",
-          descripcion: "Vidrio fijo sin sistema de apertura de facil instalación",
-          imagen: require("../../assets/cartas/fija1.png"),
+          titulo: "Baranda Mixta (Vidrio y Pasamanos de Acero)",
+          descripcion: "Estética moderna con mayor seguridad y versatilidad de diseño.",
+          imagen: require("../../assets/cartas/baranda3.png"),
         },
         {
-          titulo: "Mampara Corrediza",
-          descripcion: "Vidrio con sistema deslizante para mayor comodidad",
-          imagen: require("../../assets/cartas/corrediza1.jpg"),
+          titulo: "Baranda Curvada",
+          descripcion: "Ideal para escaleras curvas con estética sofisticada.",
+          imagen: require("../../assets/cartas/baranda4.png"),
         },
         {
-          titulo: "Box de Ducha",
-          descripcion: "Recinto de ducha cerrado de varias medidas",
-          imagen: require("../../assets/cartas/boxducha1.webp"),
-        },
-        {
-          titulo: "Mampara Bisagra",
-          descripcion: "Mampara de vidrio con sistema de bisagra",
-          imagen: require("../../assets/cartas/bisagra1.jpg"),
+          titulo: "Baranda con Herrajes Puntuales",
+          descripcion: "Vidrio sujetado por herrajes metálicos con Diseño flotante",
+          imagen: require("../../assets/cartas/baranda5.png"),
         },
       ],
     };
   },
   mounted() {
-    // Desplazar la página al principio al cargar el componente
     window.scrollTo(0, 0);
   },
 };
 </script>
 
 <style scoped>
-/* Estilos para el contenedor con la imagen de fondo */
+/* Contenedor con imagen de fondo */
 .contenedor-barandas {
-  background-image: url("../../assets/fondos/fondo2.jpg");
+  background-image: url("~@/assets/fondos/baranda.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -96,32 +90,47 @@ export default {
   align-items: center;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh; /* Asegura que el contenedor ocupe al menos el alto de la pantalla */
-  padding-bottom: 50px; /* Espacio adicional debajo del botón de WhatsApp */
+  min-height: 100vh;
+  padding-bottom: 50px;
+  position: relative;
 }
 
-/* Estilos para el contenedor de ContactoView */
+/* Overlay oscuro para legibilidad */
+.contenedor-barandas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
 .contenedor-contacto {
-  background-color: #fff; /* Fondo blanco para el componente ContactoView */
-  padding-top: 50px; /* Espacio adicional arriba de ContactoView */
-  padding-bottom: 50px; /* Espacio adicional debajo de ContactoView */
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .titulo-barandas {
-  color: rgba(241, 240, 240, 0.568);
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .subtitulo-barandas {
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .parrafo-barandas {
@@ -135,6 +144,8 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .parrafo-barandas:hover {
@@ -152,9 +163,10 @@ export default {
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
+  margin: 20px auto 0;
   display: block;
-  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .btn-whatsapp:hover {
@@ -162,16 +174,32 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .card {
-    width: 150px;
-    height: 200px;
+  .titulo-barandas {
+    font-size: 36px;
+  }
+  
+  .subtitulo-barandas {
+    font-size: 20px;
+  }
+  
+  .parrafo-barandas {
+    font-size: 16px;
+    padding: 15px;
   }
 }
 
 @media (max-width: 400px) {
-  .card {
-    width: 100px;
-    height: 150px;
+  .titulo-barandas {
+    font-size: 28px;
+  }
+  
+  .subtitulo-barandas {
+    font-size: 18px;
+  }
+  
+  .parrafo-barandas {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 </style>
