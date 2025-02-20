@@ -9,17 +9,21 @@
     <v-main>
       <!-- Ruta principal -->
       <template v-if="$route.path === '/'">
-        <MainScreen class="MainScreen" />
+        <MainScreen class="main-screen" />
         <PhotoCarousel class="photo-carousel" />
         <Service class="service" />
-        <CallToAction />
-        <GalleryCTA />
-        <WorkFamily />
+        <PayCard class="pay-card" />
+        <CallToAction class="call-to-action" />
+        <GalleryCTA class="gallery-cta" />
+        <WorkFamily class="work-family" />
       </template>
 
       <!-- Otras rutas -->
       <router-view v-else />
     </v-main>
+
+    <!-- Footer (ahora fuera del v-main) -->
+    <Footer class="footer" />
   </v-app>
 </template>
 
@@ -29,9 +33,10 @@ import MainScreen from './views/MainScreen.vue';
 import CallToAction from './components/CallToAction.vue';
 import PhotoCarousel from './components/PhotoCarousel.vue';
 import Service from './components/Service.vue';
+import PayCard from './components/PayCard.vue';
 import GalleryCTA from './components/GalleryCTA.vue';
 import WorkFamily from './components/WorkFamily.vue';
-
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -41,8 +46,10 @@ export default {
     CallToAction,
     PhotoCarousel,
     Service,
+    PayCard,
     GalleryCTA,
     WorkFamily,
+    Footer,
   },
   data() {
     return {
@@ -72,33 +79,71 @@ export default {
 </script>
 
 <style scoped>
+/* Estilos base */
 .app-container {
   width: 100%;
   min-height: 100vh;
-  padding: 20px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .app-container {
-    padding: 10px;
-  }
+/* Asegura que el contenido principal ocupe el espacio restante */
+.v-main {
+  flex: 1;
 }
 
-@media (max-width: 480px) {
-  .app-container {
-    padding: 5px;
-  }
-}
-
-/* Espaciado entre secciones */
-.MainScreen,
+/* Espaciado entre secciones - Versión Mejorada */
+.main-screen,
 .photo-carousel,
 .service,
+.pay-card,
 .call-to-action,
-.GalleryCTA
-.WorkFamily {
+.gallery-cta,
+.work-family {
   margin-bottom: 100px;
+  scroll-margin-top: 100px; /* Para compensar la barra fija */
+}
+
+/* Estilos para el Footer */
+.footer {
+  flex-shrink: 0; /* Evita que el Footer se encoja */
+}
+
+/* Responsive Design */
+@media (max-width: 1264px) {
+  .main-screen,
+  .photo-carousel,
+  .service,
+  .pay-card,
+  .call-to-action,
+  .gallery-cta,
+  .work-family {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 960px) {
+  .main-screen,
+  .photo-carousel,
+  .service,
+  .pay-card,
+  .call-to-action,
+  .gallery-cta,
+  .work-family {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-screen,
+  .photo-carousel,
+  .service,
+  .pay-card,
+  .call-to-action,
+  .gallery-cta,
+  .work-family {
+    margin-bottom: 40px;
+  }
 }
 </style>
