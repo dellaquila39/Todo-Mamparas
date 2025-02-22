@@ -10,7 +10,7 @@
     <v-btn icon href="https://w.app/uvoxGO" target="_blank" title="Whatsapp">  
       <v-icon class="whatsapp-icon" large>mdi-whatsapp</v-icon>  
     </v-btn>  
-    <v-btn icon href="mailto:info@example.com" target="_blank" title="Email">  
+    <v-btn icon href="chacalinquieto@gmail.com" target="_blank" title="Email">  
       <v-icon class="email-icon" large>mdi-email-outline</v-icon>  
     </v-btn>  
     <v-btn icon @click="goToStartView" title="Inicio">  

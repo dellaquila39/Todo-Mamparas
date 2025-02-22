@@ -76,7 +76,7 @@
               <a href="https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy" target="_blank" class="social-link">
                 <v-icon>mdi-instagram</v-icon>
               </a>
-              <a href="#" target="_blank" class="social-link">
+              <a href="chacalinquieto@gmail.com" target="_blank" class="social-link">
                 <v-icon>mdi-email</v-icon>
               </a>
             </div>
