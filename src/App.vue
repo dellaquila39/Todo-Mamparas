@@ -9,12 +9,12 @@
     <v-main>
       <!-- Ruta principal -->
       <template v-if="$route.path === '/'">
-        <MainScreen class="main-screen" />
-        <PhotoCarousel class="photo-carousel" />
-        <Service class="service" />
+        <MainScreen id="inicio" class="main-screen" />
+        <PhotoCarousel id="catalogo" class="photo-carousel" />
+        <Service id="servicios" class="service" />
         <PayCard class="pay-card" />
         <CallToAction class="call-to-action" />
-        <GalleryCTA class="gallery-cta" />
+        <GalleryCTA id="proyectos" class="gallery-cta" />
         <WorkFamily class="work-family" />
       </template>
 

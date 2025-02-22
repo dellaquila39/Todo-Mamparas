@@ -6,6 +6,10 @@ import BarandasView from '../modulos/barandas/BarandasView.vue'
 import CerramientosView from '../modulos/cerramientos/CerramientosView.vue'
 import EspejosView from '../modulos/espejos/EspejosView.vue'
 import PhotoGallery from '../components/PhotoGallery.vue'
+import ContactForm from '../components/ContactForm.vue'
+import TerminosCondiciones from '../modulos/legal/TerminosCondiciones.vue'
+import PoliticaPrivacidad from '../modulos/legal/PoliticaPrivacidad.vue'
+import AvisoLegal from '../modulos/legal/AvisoLegal.vue'
 
 Vue.use(VueRouter)
 
@@ -42,6 +46,26 @@ const routes = [
     meta: {
       scrollToTop: true
     }
+  },
+  {
+    path: '/contacto',
+    name: 'ContactoForm',
+    component: ContactForm
+  },
+  {
+    path: '/terminos',
+    name: 'TerminosCondiciones',
+    component: TerminosCondiciones
+  }, 
+  {
+    path: '/Privacidad',
+    name: 'PoliticaPrivacidad',
+    component: PoliticaPrivacidad
+  },
+  {
+    path: '/legal',
+    name: 'AvisoLegal',
+    component: AvisoLegal
   },
   {
     path: '/about',

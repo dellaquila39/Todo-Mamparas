@@ -38,7 +38,7 @@
             <v-list-item
               v-for="(link, index) in quickLinks"
               :key="index"
-              :to="link.route"
+              @click="handleLinkClick(link)"
               class="footer-link"
             >
               <v-list-item-title>{{ link.title }}</v-list-item-title>
@@ -130,25 +130,58 @@ export default {
   name: 'AppFooter',
   data: () => ({
     quickLinks: [
-      { title: 'Inicio', route: '/' },
-      { title: 'Servicios', route: '/servicios' },
-      { title: 'Proyectos', route: '/proyectos' },
-      { title: 'Catálogo', route: '/catalogo' },
-      { title: 'Contacto', route: '/contacto' }
+      { title: 'Inicio', anchor: 'inicio' },
+      { title: 'Servicios', anchor: 'servicios' },
+      { title: 'Proyectos', anchor: 'proyectos' },
+      { title: 'Catálogo', anchor: 'catalogo' },
+      { 
+        title: 'Contacto', 
+        route: '/contacto' // Redirige al formulario de contacto
+      }
     ],
     legalLinks: [
       { title: 'Términos y Condiciones', url: '/terminos' },
       { title: 'Política de Privacidad', url: '/privacidad' },
-      { title: 'Política de Cookies', url: '/cookies' },
-      { title: 'Aviso Legal', url: '/aviso-legal' }
+      { title: 'Aviso Legal', url: '/legal' }
     ],
     socialMedia: [
-      { icon: 'mdi-facebook', link: '#' },
-      { icon: 'mdi-instagram', link: '#' },
+      { icon: 'mdi-facebook', link: 'https://www.facebook.com/share/159Fo8pesp/' },
+      { icon: 'mdi-instagram', link: 'https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy' },
       { icon: 'mdi-linkedin', link: '#' },
       { icon: 'mdi-youtube', link: '#' }
     ]
-  })
+  }),
+  methods: {
+    handleLinkClick(link) {
+      if (link.route) {
+        this.$router.push(link.route); // Redirige a la ruta interna
+      } else if (link.external) {
+        window.open(link.url, '_blank'); // Abre enlaces externos
+      } else {
+        this.scrollToSection(link.anchor); // Scroll a secciones
+      }
+    },
+    scrollToSection(anchor) {
+      if (this.$route.path !== '/') {
+        this.$router.push('/').then(() => {
+          this.$nextTick(() => {
+            this.scrollToAnchor(anchor);
+          });
+        });
+      } else {
+        this.scrollToAnchor(anchor);
+      }
+    },
+    scrollToAnchor(anchor) {
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  }
 }
 </script>
 
@@ -199,6 +232,7 @@ export default {
   color: #b2bec3 !important;
   transition: all 0.3s ease;
   padding: 4px 0 !important;
+  cursor: pointer;
 }
 
 .footer-link:hover {
