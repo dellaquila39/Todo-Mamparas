@@ -59,7 +59,7 @@ export default {
         {
           title: "Mamparas de Vidrio",
           description: "Despierta la elegancia en tus espacios con nuestras mamparas de vidrio de alta calidad...",
-          image: require('@/assets/trabajo/mampara1.jpg'),
+          image: require('@/assets/trabajo/mampara2.webp'),
           icon: "mdi-shower",
           color: "primary darken-3",  
           route: "/mamparas",

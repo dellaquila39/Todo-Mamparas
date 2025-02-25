@@ -22,7 +22,7 @@
                 @click="scrollToContent"
               >
                 <v-icon left>mdi-heart-multiple</v-icon>
-                Conoce Nuestra Historia
+                Conoce Nuestro Fundador
               </v-btn>
             </v-col>
           </v-row>
@@ -30,55 +30,46 @@
       </div>
     </div>
 
-    <!-- Sección del CEO -->
+    <!-- Sección del CEO Rediseñada -->
     <section ref="contentSection" class="ceo-section py-16">
       <v-container>
         <v-row align="center" justify="center">
-          <v-col cols="12" md="6" class="ceo-photo">
-            <v-img
-              :src="require('@/assets/logos/retrato.jpeg')"
-              :lazy-src="require('@/assets/logos/retrato.jpeg')"
-              aspect-ratio="1"
-              class="ceo-image"
-              gradient="to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)"
-            >
-              <div class="ceo-overlay">
-                <v-icon large color="white">mdi-format-quote-open</v-icon>
-                <p class="ceo-quote">"La verdadera medida de un hombre no es lo que construye, sino cómo lo construye."</p>
+          <v-col cols="12" md="8" class="ceo-narrative">
+            <div class="narrative-card">
+              <v-icon large color="primary" class="quote-icon">mdi-format-quote-open</v-icon>
+              
+              <h2 class="narrative-title">Un Mensaje de Nuestro Fundador</h2>
+              
+              <div class="narrative-content">
+                <p class="narrative-text">
+                  <span class="first-letter">S</span>oy Lucas Cardella, un apasionado del vidrio con más de tres años de experiencia en la fabricación de todo tipo de vidrios, desde cortes hasta el proceso de cocción. Esta trayectoria me ha proporcionado un profundo conocimiento sobre las distintas funcionalidades y aplicaciones del vidrio.
+                </p>
+
+                <p class="narrative-text">
+                  Hoy, dirijo mi propio negocio, donde ofrezco una amplia gama de productos, incluyendo mamparas, espejos, barandas y cerramientos. Me enorgullece no solo vender, sino también instalar cada uno de estos elementos, asegurando un acabado de calidad y una atención personalizada en cada proyecto.
+                </p>
+
+                <p class="narrative-text">
+                  Nuestro enfoque va más allá de proporcionar soluciones estéticas; buscamos cumplir con las necesidades específicas de nuestros clientes, garantizando un servicio integral que abarca desde la selección del vidrio ideal hasta la finalización del trabajo. Estoy aquí para convertir tus ideas en realidad y brindarte la mejor experiencia posible.
+                </p>
+
+                <p class="narrative-text">
+                  ¡Te invito a descubrir cómo podemos trabajar juntos para realzar tu espacio con el vidrio perfecto!
+                </p>
               </div>
-            </v-img>
-          </v-col>
 
-          <v-col cols="12" md="6" class="ceo-info">
-            <h2 class="ceo-name">Lucas Martinez</h2>
-            <p class="ceo-role">Fundador de Todo Mampara</p>
-            <div class="ceo-description">
-              <p>
-                Es un visionario emprendedor con una pasión por la innovación y la excelencia. 
-                Con una trayectoria de cinco años en la industria del vidrio, Lucas ha desarrollado un profundo conocimiento y respeto por el material, 
-                lo que lo ha llevado a crear soluciones únicas y funcionales.
-
-              </p>
-              <p>
-                Trabajando junto a su padre y un equipo de profesionales apasionados, 
-                Lucas está revolucionando la forma en que pensamos sobre el vidrio y su aplicación en la arquitectura y el diseño.
-              </p>
-              <p>
-                Su filosofía de negocio se basa en la innovación, la funcionalidad y la construcción de relaciones sólidas con sus clientes y colaboradores. 
-                Con <strong>Todo Mampara</strong>, Lucas está creando un legado que trasciende la empresa en sí, 
-                y que se refleja en cada proyecto y cada pieza de vidrio que sale de su taller.
-              </p>
-            </div>
-            <div class="ceo-social">
-              <a href="#" target="_blank" class="social-link">
-                <v-icon>mdi-linkedin</v-icon>
-              </a>
-              <a href="https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy" target="_blank" class="social-link">
-                <v-icon>mdi-instagram</v-icon>
-              </a>
-              <a href="chacalinquieto@gmail.com" target="_blank" class="social-link">
-                <v-icon>mdi-email</v-icon>
-              </a>
+              <div class="ceo-signature">
+                <p class="signature-name">Lucas Cardella</p>
+                <p class="signature-role">Fundador</p>
+                <div class="ceo-social">
+                  <a href="https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy" target="_blank" class="social-link">
+                    <v-icon>mdi-instagram</v-icon>
+                  </a>
+                  <a href="mailto:chacalinquieto@gmail.com" class="social-link">
+                    <v-icon>mdi-email</v-icon>
+                  </a>
+                </div>
+              </div>
             </div>
           </v-col>
         </v-row>
@@ -170,70 +161,87 @@ export default {
 }
 
 .ceo-section {
-  background: white;
+  background: #f8f9fa;
 
-  .ceo-photo {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-
-    .ceo-image {
+  .ceo-narrative {
+    .narrative-card {
+      background: white;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-
-    .ceo-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 2rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
-      color: white;
-      text-align: center;
-
-      .ceo-quote {
-        font-style: italic;
-        margin-top: 1rem;
+      padding: 3rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      position: relative;
+      
+      .quote-icon {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        opacity: 0.1;
+        font-size: 4rem;
       }
-    }
-  }
 
-  .ceo-info {
-    padding: 2rem;
-
-    .ceo-name {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
-      color: #2A3B5D;
-    }
-
-    .ceo-role {
-      font-size: 1.25rem;
-      color: #4A667A;
-      margin-bottom: 2rem;
-    }
-
-    .ceo-description {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #495057;
-
-      p {
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    .ceo-social {
-      margin-top: 2rem;
-
-      .social-link {
-        margin-right: 1rem;
+      .narrative-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
         color: #2A3B5D;
-        transition: color 0.3s ease;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
 
-        &:hover {
+      .narrative-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        .narrative-text {
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #495057;
+          margin-bottom: 1.5rem;
+          position: relative;
+          padding-left: 2rem;
+          border-left: 3px solid #2196F3;
+
+          .first-letter {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #2A3B5D;
+            margin-right: 0.2em;
+          }
+        }
+      }
+
+      .ceo-signature {
+        margin-top: 3rem;
+        text-align: center;
+        border-top: 2px solid #eee;
+        padding-top: 2rem;
+
+        .signature-name {
+          font-family: 'Poppins', sans-serif;
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #2A3B5D;
+          margin-bottom: 0.5rem;
+        }
+
+        .signature-role {
           color: #4A667A;
+          margin-bottom: 1.5rem;
+        }
+
+        .ceo-social {
+          .social-link {
+            margin: 0 1rem;
+            color: #2A3B5D;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #2196F3;
+            }
+
+            .v-icon {
+              font-size: 1.5rem;
+            }
+          }
         }
       }
     }
@@ -264,12 +272,47 @@ export default {
 
 @media (max-width: 960px) {
   .ceo-section {
-    .ceo-photo {
-      margin-bottom: 2rem;
-    }
+    .ceo-narrative {
+      .narrative-card {
+        padding: 2rem;
 
-    .ceo-info {
-      text-align: center;
+        .quote-icon {
+          font-size: 3rem;
+        }
+
+        .narrative-title {
+          font-size: 1.75rem;
+        }
+
+        .narrative-text {
+          font-size: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .ceo-section {
+    .ceo-narrative {
+      .narrative-card {
+        padding: 1.5rem;
+
+        .narrative-title {
+          font-size: 1.5rem;
+        }
+
+        .narrative-text {
+          font-size: 0.95rem;
+        }
+
+        .ceo-signature {
+          .signature-name {
+            font-size: 1.3rem;
+          }
+        }
+      }
     }
   }
 }
