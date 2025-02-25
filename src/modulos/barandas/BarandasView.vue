@@ -14,12 +14,15 @@
             Permítenos envolver tus sentidos en un mundo de claridad y sofisticación.
           </p>
           <BarandasCarousel :barandas="barandas" />
-          <button class="btn-whatsapp">WhatsApp</button>
+          <button class="btn-whatsapp">
+            <v-icon left dark>mdi-whatsapp</v-icon>
+            Contactar por WhatsApp
+          </button>
         </v-col>
       </v-row>
     </v-container>
 
-    <!-- Contenedor para ContactoView (fuera de la imagen de fondo) -->
+    <!-- Contenedor para ContactoView -->
     <v-container fluid class="contenedor-contacto">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
@@ -78,24 +81,25 @@ export default {
 </script>
 
 <style scoped>
-/* Contenedor con imagen de fondo */
+/* Contenedor principal */
 .contenedor-barandas {
-  background-image: url("~@/assets/fondos/baranda.jpg");
+  background-image: url('~@/assets/fondos/baranda.jpg');
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
-  padding-bottom: 50px;
+  padding: 80px 20px;
   position: relative;
+  overflow: hidden;
 }
 
-/* Overlay oscuro para legibilidad */
+/* Overlay mejorado */
 .contenedor-barandas::before {
   content: "";
   position: absolute;
@@ -103,103 +107,152 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2));
   z-index: 1;
 }
 
 .contenedor-contacto {
-  background-color: #fff;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: #f9f9f9;
+  padding: 80px 0;
 }
 
+/* Animación de entrada */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Textos animados */
 .titulo-barandas {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
   z-index: 2;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.8s ease-out forwards;
 }
 
 .subtitulo-barandas {
-  font-size: 24px;
-  font-weight: normal;
-  margin-bottom: 20px;
-  opacity: 0.9;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
   text-align: center;
   position: relative;
   z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.95;
+  animation: slideUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
 }
 
 .parrafo-barandas {
-  font-size: 18px;
-  font-weight: normal;
-  text-align: center;
-  max-width: 600px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  max-width: 800px;
+  padding: 25px;
+  margin: 0 auto 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 2;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  animation: slideUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
 }
 
 .parrafo-barandas:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-10px);
-  transition: all 0.4s ease-in-out;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Botón WhatsApp animado */
 .btn-whatsapp {
-  background-color: #25d366;
+  background: #25d366;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 40px auto 0;
   cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 20px auto 0;
-  display: block;
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  animation: slideUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
 }
 
 .btn-whatsapp:hover {
-  background-color: #1da85f;
+  background: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
-@media (max-width: 600px) {
+/* Responsive mejorado */
+@media (max-width: 960px) {
   .titulo-barandas {
-    font-size: 36px;
+    font-size: 2.8rem;
   }
   
   .subtitulo-barandas {
-    font-size: 20px;
+    font-size: 1.3rem;
   }
   
   .parrafo-barandas {
-    font-size: 16px;
-    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-barandas {
+    padding: 60px 15px;
+    background-attachment: scroll;
+  }
+  
+  .titulo-barandas {
+    font-size: 2rem;
+  }
+  
+  .subtitulo-barandas {
+    font-size: 1.1rem;
+  }
+  
+  .parrafo-barandas {
+    padding: 20px;
+  }
+  
+  .btn-whatsapp {
+    padding: 12px 25px;
   }
 }
 
 @media (max-width: 400px) {
   .titulo-barandas {
-    font-size: 28px;
-  }
-  
-  .subtitulo-barandas {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
   
   .parrafo-barandas {
-    font-size: 14px;
-    padding: 10px;
+    padding: 15px;
   }
 }
 </style>
+
+

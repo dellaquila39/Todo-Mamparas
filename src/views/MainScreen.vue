@@ -1,21 +1,21 @@
 <template>
   <v-container fluid class="hero-container pa-0">
-    <!-- Imagen de fondo optimizada -->
+    <!-- Imagen optimizada -->
     <v-img
-      :src="require('@/assets/fondos/fondo00.jpg')"
-      :lazy-src="require('@/assets/fondos/fondo00-placeholder.png')"
+      :src="require('@/assets/fondos/fondo00.webp')"
       alt="Mamparas de lujo modernas"
       class="hero-image"
       height="100vh"
       gradient="to top right, rgba(12, 32, 56, 0.4), rgba(24, 64, 96, 0.6)"
       cover
+      eager
     >
       <!-- Contenido estratificado -->
       <div class="content-overlay">
         <v-row align="center" justify="center" class="fill-height">
           <v-col cols="12" md="10" lg="8" class="text-center">
-            <!-- Titulo con animación -->
-            <h1 class="hero-title animate__animated animate__fadeInDown">
+            <!-- Titulo simplificado -->
+            <h1 class="hero-title">
               Todo en Mampara! <br> Excelencia en vidrios de Lujo
             </h1>
 
@@ -23,14 +23,14 @@
             <v-divider class="my-8 mx-auto accent" style="max-width: 200px"></v-divider>
 
             <!-- Texto destacado -->
-            <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+            <p class="hero-subtitle">
               Transformamos tus espacios con diseño arquitectónico<br>
               y materiales premium
             </p>
 
-            <!-- Botón de acción mejorado -->
+            <!-- Botón de acción -->
             <v-btn
-              class="cta-button mt-12 animate__animated animate__fadeInUp animate__delay-1s"
+              class="cta-button mt-12"
               x-large
               rounded
               color="accent"
@@ -56,12 +56,15 @@ export default {
       window.open("https://wa.me/5491131918140", "_blank");
     },
   },
+  mounted() {
+    // Precarga la imagen principal
+    const img = new Image();
+    img.src = require('@/assets/fondos/fondo00.webp');
+  }
 };
 </script>
 
 <style scoped>
-/* @import '~animate.css/animate.min.css'; */
-
 .hero-container {
   height: 100vh;
   position: relative;
@@ -73,6 +76,8 @@ export default {
   background-size: cover;
   background-position: center;
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .hero-image::after {
@@ -100,6 +105,8 @@ export default {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   letter-spacing: -0.5px;
   margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .hero-subtitle {
@@ -109,6 +116,8 @@ export default {
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
 }
 
 .cta-button {
@@ -120,11 +129,24 @@ export default {
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
   box-shadow: 0 8px 24px rgba(18, 140, 126, 0.4) !important;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(18, 140, 126, 0.5) !important;
+}
+
+/* Animaciones minimalistas personalizadas */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
