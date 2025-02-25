@@ -39,10 +39,11 @@
             color="green darken-1"
             dark
             x-large
-            @click="openWhatsApp"
+            href="https://wa.me/5491134494555" 
+            target="_blank"
             class="animated-button"
           >
-            +549 11 5648-5574
+          +54 9 11 3449-4555
           </v-btn>
         </div>
       </v-col>
@@ -57,8 +58,9 @@
             color="pink darken-1"
             dark
             x-large
-            @click="openInstagram"
+            href="https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy"
             class="animated-button"
+            target="_blank"
           >
             @todomamparas
           </v-btn>
@@ -75,10 +77,11 @@
             color="blue darken-1"
             dark
             x-large
-            @click="openEmail"
+            href="mailto:chacalinquieto@gmail.com" 
             class="animated-button email-button"
+            target="_blank"
           >
-            todomamparas@gmail.com
+          chacalinquieto@gmail.com
           </v-btn>
         </div>
       </v-col>
@@ -89,20 +92,7 @@
 <script>
 export default {
   name: "ContactoView",
-  methods: {
-    // Abrir WhatsApp
-    openWhatsApp() {
-      window.open("", "_blank");
-    },
-    // Abrir Instagram
-    openInstagram() {
-      window.open("", "_blank");
-    },
-    // Abrir correo electrónico
-    openEmail() {
-      window.location.href = "";
-    },
-  },
+
 };
 </script>
 

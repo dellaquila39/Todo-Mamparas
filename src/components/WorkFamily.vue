@@ -80,8 +80,13 @@
     <div class="cta-section text-center py-16">
       <h2 class="cta-title mb-4">¿Queres Ser Parte de Nuestra Familia?</h2>
       <p class="cta-subtitle mb-8">Asociate con Nosotros y Construyamos el Futuro</p>
-      <v-btn x-large color="primary" class="cta-btn">
-        <v-icon left>mdi-account-group</v-icon>
+      <v-btn x-large 
+      color="primary" 
+      class="cta-btn"
+      href="https://wa.me/5491134494555" 
+      target="_blank"
+      > 
+      <v-icon left>mdi-account-group</v-icon>
         Hablemos de Negocios
       </v-btn>
     </div>

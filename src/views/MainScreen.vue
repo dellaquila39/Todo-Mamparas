@@ -34,7 +34,8 @@
               x-large
               rounded
               color="accent"
-              @click="openWhatsApp"
+              href="https://wa.me/5491134494555" 
+              target="_blank"
               dark
             >
               <v-icon left size="28" class="mr-2">mdi-whatsapp</v-icon>
@@ -51,11 +52,7 @@
 <script>
 export default {
   name: "MainScreen",
-  methods: {
-    openWhatsApp() {
-      window.open("https://wa.me/5491131918140", "_blank");
-    },
-  },
+
   mounted() {
     // Precarga la imagen principal
     const img = new Image();
