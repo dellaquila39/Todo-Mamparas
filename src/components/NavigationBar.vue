@@ -52,7 +52,7 @@
           <v-btn 
             icon 
             color="#25D366"
-            href="https://w.app/uvoxGO" 
+            href="https://wa.me/5491134494555" 
             target="_blank"
             class="social-icon"
             v-on="on"

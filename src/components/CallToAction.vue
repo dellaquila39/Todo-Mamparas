@@ -11,9 +11,10 @@
           dark
           large
           class="cta-button"
-          @click="contactar"
+          href="https://wa.me/5491134494555" 
+          target="_blank"
         >
-          <v-icon left>mdi-email</v-icon>
+          <v-icon left>mdi-whatsapp</v-icon>
           Obtener un presupuesto gratuito
         </v-btn>
       </v-col>
@@ -24,12 +25,7 @@
 <script>
 export default {
   name: "CallToAction",
-  methods: {
-    contactar() {
-      // Aquí iría la lógica para contactar con nosotros (email, teléfono, formulario, etc.)
-      window.location.href = "mailto:contacto@empresa.com";
-    },
-  },
+
 };
 </script>
 
