@@ -49,7 +49,7 @@
         </v-hover>
       </v-col>
     </v-row>
-          <!-- Nuevo bloque de texto -->
+
     <v-row class="justify-center mt-6">
       <v-col cols="12" md="8" class="text-center payment-disclaimer">
         <div class="disclaimer-container">
@@ -75,14 +75,14 @@ export default {
     paymentMethods: [
       {
         title: 'Efectivo',
-        icon: 'mdi-cash-fast', // Icono más minimalista
+        icon: 'mdi-cash-fast',
         color: '#4CAF50',
         description: 'Descuento especial por pago en efectivo',
         extra: [require('@/assets/pagos/efectivo.png')]
       },
       {
         title: 'Transferencia',
-        icon: 'mdi-bank-outline', // Icono outline
+        icon: 'mdi-bank-outline',
         color: '#2196F3',
         description: 'Cuenta corriente disponible',
         extra: [require('@/assets/pagos/transferencia1.jpg')]
@@ -90,14 +90,14 @@ export default {
       },
       {
         title: 'Tarjeta de Débito',
-        icon: 'mdi-card-account-details-outline', // Icono más específico
+        icon: 'mdi-card-account-details-outline',
         color: '#9C27B0',
         description: 'Aceptamos todas las tarjetas',
         extra: [require('@/assets/pagos/visa-debito.png')]
       },
       {
         title: 'Tarjeta de Crédito',
-        icon: 'mdi-contactless-payment', // Icono moderno
+        icon: 'mdi-contactless-payment',
         color: '#FF9800',
         description: 'Aceptamos todas las tarjetas de credito',
         extra: [require('@/assets/pagos/mastercard.png')
@@ -140,8 +140,8 @@ n
 
 .payment-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 280px; /* Ancho fijo */
-  min-height: 320px; /* Altura mínima consistente */
+  width: 280px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,8 +258,8 @@ n
 
 @media (max-width: 600px) {
   .payment-card {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 300px; /* Límite máximo para mantener proporción */
+    width: 100%;
+    max-width: 300px;
     min-height: 280px;
   }
 }

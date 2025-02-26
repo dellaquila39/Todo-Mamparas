@@ -2,16 +2,13 @@
   <v-container class="terms-container">
     <v-row class="justify-center">
       <v-col cols="12" md="10" lg="8">
-        <!-- Encabezado -->
         <div class="text-center mb-8">
           <h1 class="terms-title primary--text">Términos y Condiciones de Uso</h1>
           <p class="update-date">Última actualización: 22 de Febrero de 2025</p>
           <v-divider class="my-4"></v-divider>
         </div>
 
-        <!-- Contenido -->
         <v-list class="terms-content" dense>
-          <!-- Sección 1: Aceptación de los Términos -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">1. Aceptación de los Términos</h2>
@@ -21,7 +18,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 2: Uso del Sitio -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">2. Uso del Sitio</h2>
@@ -41,7 +37,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 3: Propiedad Intelectual -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">3. Propiedad Intelectual</h2>
@@ -51,7 +46,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 4: Exención de Responsabilidad -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">4. Exención de Responsabilidad</h2>
@@ -61,7 +55,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 5: Enlaces a Terceros -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">5. Enlaces a Terceros</h2>
@@ -71,7 +64,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 6: Protección de Datos -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">6. Protección de Datos</h2>
@@ -81,7 +73,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 7: Modificaciones de los Términos -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">7. Modificaciones de los Términos</h2>
@@ -91,7 +82,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 8: Legislación Aplicable -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">8. Legislación Aplicable</h2>
@@ -101,7 +91,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 9: Contacto -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">9. Contacto</h2>

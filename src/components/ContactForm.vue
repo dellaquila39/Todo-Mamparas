@@ -142,9 +142,9 @@ export default {
   methods: {
     submitForm() {
       if (this.$refs.form.validate()) {
-        // Aquí implementar el envío del formulario
+        // fornmulario en espera de lucas
         console.log('Formulario enviado:', this.form)
-        // Resetear formulario después del envío
+        // reseteo si es necesario por lucas 
         this.$refs.form.reset()
       }
     }

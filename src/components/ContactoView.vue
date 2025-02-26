@@ -1,13 +1,12 @@
 <template>
   <v-container class="contacto-view">
-    <!-- Título -->
+
     <v-row justify="center">
       <v-col cols="12" class="text-center">
         <h2 class="display-1 font-weight-bold mb-6">Contáctanos</h2>
       </v-col>
     </v-row>
 
-    <!-- Texto de ayuda -->
     <v-row justify="center" class="mb-8">
       <v-col cols="12" md="8" class="text-center">
         <p class="subtitulo-contacto">
@@ -27,14 +26,12 @@
       </v-col>
     </v-row>
 
-    <!-- Botones de contacto -->
+
     <v-row justify="center" class="mb-6">
-      <!-- WhatsApp -->
+
       <v-col cols="12" md="4" class="text-center">
         <div class="d-flex align-center justify-center">
-          <!-- Icono -->
           <v-icon class="mr-4" size="64" color="green darken-1">mdi-whatsapp</v-icon>
-          <!-- Botón -->
           <v-btn
             color="green darken-1"
             dark
@@ -48,12 +45,10 @@
         </div>
       </v-col>
 
-      <!-- Instagram -->
+
       <v-col cols="12" md="4" class="text-center">
         <div class="d-flex align-center justify-center">
-          <!-- Icono -->
           <v-icon class="mr-4" size="64" color="pink darken-1">mdi-instagram</v-icon>
-          <!-- Botón -->
           <v-btn
             color="pink darken-1"
             dark
@@ -67,12 +62,10 @@
         </div>
       </v-col>
 
-      <!-- Correo electrónico -->
+
       <v-col cols="12" md="4" class="text-center">
         <div class="d-flex align-center justify-center">
-          <!-- Icono -->
           <v-icon class="mr-4" size="64" color="blue darken-1">mdi-email</v-icon>
-          <!-- Botón -->
           <v-btn
             color="blue darken-1"
             dark
@@ -99,12 +92,12 @@ export default {
 <style scoped>
 .contacto-view {
   padding: 4rem 0;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el texto de ayuda */
+
 .subtitulo-contacto {
   font-size: 22px;
   font-weight: 400;
@@ -127,7 +120,7 @@ export default {
   margin-bottom: 8px;
 }
 
-/* Animación para los botones */
+
 .animated-button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -137,14 +130,14 @@ export default {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos específicos para el botón de correo electrónico */
+
 .email-button {
-  font-size: 14px; /* Reducir el tamaño de la fuente */
-  padding: 12px 16px; /* Reducir el padding horizontal */
+  font-size: 14px;
+  padding: 12px 16px;
 
 }
 
-/* Estilos responsivos */
+
 @media (max-width: 960px) {
   .contacto-view {
     padding: 2rem 0;

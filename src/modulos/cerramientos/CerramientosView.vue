@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Contenedor con la imagen de fondo -->
+
     <v-container fluid class="contenedor-cerramientos">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
@@ -23,7 +23,6 @@
       </v-row>
     </v-container>
 
-    <!-- Contenedor para ContactoView -->
     <v-container fluid class="contenedor-contacto">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
@@ -82,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-/* Contenedor principal */
+
 .contenedor-cerramientos {
   background-image: url('~@/assets/fondos/fondo2.jpg');
   background-size: cover;
@@ -100,7 +99,6 @@ export default {
   overflow: hidden;
 }
 
-/* Overlay mejorado */
 .contenedor-cerramientos::before {
   content: "";
   position: absolute;
@@ -117,7 +115,6 @@ export default {
   padding: 80px 0;
 }
 
-/* Textos mejorados */
 .titulo-cerramientos {
   font-size: 3.5rem;
   font-weight: 800;
@@ -166,7 +163,6 @@ export default {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón WhatsApp mejorado */
 .btn-whatsapp {
   background: #25d366;
   color: #fff;
@@ -195,7 +191,6 @@ export default {
   transform: translateY(0);
 }
 
-/* Animaciones */
 @keyframes slideUp {
   to {
     transform: translateY(0);
@@ -203,7 +198,6 @@ export default {
   }
 }
 
-/* Responsive mejorado */
 @media (max-width: 960px) {
   .titulo-cerramientos {
     font-size: 2.8rem;

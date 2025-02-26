@@ -8,7 +8,7 @@
     >
       <v-card class="section-card">
         <v-row no-gutters class="align-stretch">
-          <!-- Contenido de Texto -->
+
           <v-col cols="12" md="6" class="text-content">
             <div class="text-wrapper d-flex flex-column justify-center">
               <div class="decorative-line mx-auto"></div>
@@ -30,7 +30,7 @@
             </div>
           </v-col>
 
-          <!-- Contenido de Imagen -->
+
           <v-col cols="12" md="6" class="image-content pa-0">
             <v-img
               :src="section.image"

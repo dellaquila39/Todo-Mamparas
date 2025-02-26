@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app color="white" elevate-on-scroll height="80" class="navigation-bar">
-    <!-- Logo -->
+
     <v-avatar class="logo" size="120" tile>
       <img 
         :src="require('@/assets/logos/logo2.png')" 
@@ -11,17 +11,16 @@
 
     <v-spacer></v-spacer>
 
-    <!-- Menú principal -->
     <div class="nav-links d-none d-md-flex">
       <v-btn text @click="goToStartView" class="nav-link">
         <v-icon left>mdi-home</v-icon>
         Inicio
       </v-btn>
-      <v-btn text to="/contacto" class="nav-link"> <!-- Cambiado a Contacto -->
+      <v-btn text to="/contacto" class="nav-link"> 
         <v-icon left>mdi-email-send</v-icon>
         Contacto
       </v-btn>
-      <v-btn text @click="scrollToSection('proyectos')" class="nav-link"> <!-- Redirección a sección -->
+      <v-btn text @click="scrollToSection('proyectos')" class="nav-link">
         <v-icon left>mdi-image-multiple</v-icon>
         Proyectos
       </v-btn>
@@ -29,7 +28,6 @@
 
     <v-spacer></v-spacer>
 
-    <!-- Iconos de contacto - Modificado el contenedor -->
     <div class="social-icons-container">
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
@@ -79,7 +77,6 @@
       </v-tooltip>
     </div>
 
-    <!-- Menú móvil actualizado -->
     <v-menu bottom left class="d-flex d-md-none">
       <template v-slot:activator="{ on }">
         <v-btn icon v-on="on">
@@ -174,7 +171,6 @@ export default {
   transform: translateY(-2px);
 }
 
-/* Contenedor modificado para los iconos */
 .social-icons-container {
   display: flex;
   align-items: center;
@@ -192,7 +188,7 @@ export default {
   transform: scale(1.15);
 }
 
-/* Ajustes responsive para iconos */
+
 @media (max-width: 960px) {
   .logo {
     margin-left: 1rem;

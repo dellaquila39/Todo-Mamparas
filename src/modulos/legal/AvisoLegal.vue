@@ -2,16 +2,14 @@
   <v-container class="legal-notice-container">
     <v-row class="justify-center">
       <v-col cols="12" md="10" lg="8">
-        <!-- Encabezado -->
+
         <div class="text-center mb-8">
           <h1 class="legal-notice-title primary--text">Aviso Legal</h1>
           <p class="update-date">Última actualización: 22 de Febrero de 2025</p>
           <v-divider class="my-4"></v-divider>
         </div>
 
-        <!-- Contenido -->
         <v-list class="legal-notice-content" dense>
-          <!-- Sección 1: Identificación del Titular -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">1. Identificación del Titular</h2>
@@ -26,7 +24,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 2: Objeto -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">2. Objeto</h2>
@@ -36,7 +33,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 3: Propiedad Intelectual -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">3. Propiedad Intelectual</h2>
@@ -46,7 +42,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 4: Responsabilidad -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">4. Responsabilidad</h2>
@@ -56,7 +51,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 5: Enlaces a Terceros -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">5. Enlaces a Terceros</h2>
@@ -66,7 +60,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 6: Modificaciones -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">6. Modificaciones</h2>
@@ -76,7 +69,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 7: Legislación Aplicable -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">7. Legislación Aplicable</h2>
@@ -86,7 +78,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 8: Contacto -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">8. Contacto</h2>

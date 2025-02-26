@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Contenedor con la imagen de fondo -->
+
     <v-container fluid class="fondo-espejos">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
@@ -22,7 +22,6 @@
       </v-row>
     </v-container>
 
-    <!-- Contenedor para ContactoView -->
     <v-container fluid class="contenedor-contacto">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10" xl="8">
@@ -86,7 +85,7 @@ export default {
 </script>
 
 <style scoped>
-/* Contenedor principal */
+
 .fondo-espejos {
   background-image: url('~@/assets/fondos/fondo2.jpg');
   background-size: cover;
@@ -104,7 +103,6 @@ export default {
   overflow: hidden;
 }
 
-/* Overlay mejorado */
 .fondo-espejos::before {
   content: "";
   position: absolute;
@@ -121,7 +119,6 @@ export default {
   padding: 80px 0;
 }
 
-/* Animación de entrada */
 @keyframes slideUp {
   from {
     transform: translateY(20px);
@@ -133,7 +130,6 @@ export default {
   }
 }
 
-/* Textos animados */
 .titulo-espejos {
   font-size: 3.5rem;
   font-weight: 800;
@@ -184,7 +180,6 @@ export default {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón WhatsApp animado */
 .btn-whatsapp {
   background: #25d366;
   color: #fff;
@@ -211,7 +206,6 @@ export default {
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
-/* Responsive mejorado */
 @media (max-width: 960px) {
   .titulo-espejos {
     font-size: 2.8rem;

@@ -1,6 +1,6 @@
 <template>
   <v-container class="gallery-container">
-    <!-- Título con referencia para scroll -->
+
     <div ref="titleAnchor">
       <v-row class="title-wrapper">
         <v-col cols="12">
@@ -20,7 +20,7 @@
       </v-row>
     </div>
 
-    <!-- Galería de Proyectos -->
+
     <v-row class="cards-wrapper">
       <v-col
         v-for="(project, index) in projects"
@@ -66,7 +66,7 @@
       </v-col>
     </v-row>
 
-    <!-- Lightbox Fullscreen (solo móvil) -->
+
     <v-dialog
       v-model="lightbox.open"
       fullscreen
@@ -274,7 +274,7 @@ export default {
     position: relative;
     margin-bottom: 4rem;
     overflow: hidden;
-    scroll-margin-top: 80px; // Espacio para headers fijos
+    scroll-margin-top: 80px;
 
     .animated-title {
       position: relative;
@@ -370,7 +370,7 @@ export default {
 
   .cards-wrapper {
     margin-top: 2rem;
-    contain: layout paint; // Optimización de rendimiento
+    contain: layout paint;
   }
 }
 
@@ -380,7 +380,7 @@ export default {
   overflow: hidden;
   position: relative;
   cursor: default;
-  transform: translateZ(0); // Acelera hardware
+  transform: translateZ(0);
   
   &::before {
     content: '';
@@ -408,7 +408,7 @@ export default {
 .image-comparison {
   height: 350px;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-  contain: strict; // Optimiza rendering
+  contain: strict;
   
   @media (max-width: 960px) {
     height: 250px;

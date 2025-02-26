@@ -1,9 +1,9 @@
 <template>
   <v-footer dark class="footer">
     <v-container>
-      <!-- Sección principal del footer -->
+
       <v-row class="footer-content">
-        <!-- Columna de información de la empresa -->
+
         <v-col cols="12" md="4" class="footer-section">
           <div class="logo-container mb-4">
             <v-img
@@ -31,7 +31,7 @@
           </div>
         </v-col>
 
-        <!-- Columna de enlaces rápidos -->
+
         <v-col cols="6" md="2" class="footer-section">
           <h3 class="footer-heading">Navegación</h3>
           <v-list dense class="transparent">
@@ -46,7 +46,7 @@
           </v-list>
         </v-col>
 
-        <!-- Columna legal -->
+
         <v-col cols="6" md="2" class="footer-section">
           <h3 class="footer-heading">Legal</h3>
           <v-list dense class="transparent">
@@ -62,7 +62,7 @@
           </v-list>
         </v-col>
 
-        <!-- Columna de contacto -->
+
         <v-col cols="12" md="4" class="footer-section">
           <h3 class="footer-heading">Contacto</h3>
           <v-list dense class="transparent contact-list">
@@ -99,10 +99,10 @@
         </v-col>
       </v-row>
 
-      <!-- Divider -->
+
       <v-divider class="my-6"></v-divider>
 
-      <!-- Sección inferior del footer -->
+
       <v-row class="footer-bottom">
         <v-col cols="12" md="6" class="copyright">
           © {{ new Date().getFullYear() }} Todo Mampara S.A. - Todos los derechos reservados
@@ -136,7 +136,7 @@ export default {
       { title: 'Catálogo', anchor: 'catalogo' },
       { 
         title: 'Contacto', 
-        route: '/contacto' // Redirige al formulario de contacto
+        route: '/contacto' 
       }
     ],
     legalLinks: [
@@ -154,11 +154,11 @@ export default {
   methods: {
     handleLinkClick(link) {
       if (link.route) {
-        this.$router.push(link.route); // Redirige a la ruta interna
+        this.$router.push(link.route); 
       } else if (link.external) {
-        window.open(link.url, '_blank'); // Abre enlaces externos
+        window.open(link.url, '_blank'); // 
       } else {
-        this.scrollToSection(link.anchor); // Scroll a secciones
+        this.scrollToSection(link.anchor);
       }
     },
     scrollToSection(anchor) {

@@ -32,7 +32,7 @@ export default {
 <style scoped>
 .cta-container {
   background: linear-gradient(to bottom, #4567b7, #1a1d23);
-  height: 400px; /* Aumenté la altura para un mejor aspecto */
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@ export default {
   font-weight: bold;
   margin-bottom: 1rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 0 20px; /* Añadí padding para evitar que el texto se corte */
+  padding: 0 20px; 
 }
 
 .cta-description {
@@ -52,7 +52,7 @@ export default {
   margin-bottom: 2rem;
   line-height: 1.6;
   opacity: 0.9;
-  padding: 0 20px; /* Añadí padding para evitar que el texto se corte */
+  padding: 0 20px;
 }
 
 .cta-button {
@@ -60,8 +60,8 @@ export default {
   color: #fff;
   font-weight: bold;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  white-space: normal; /* Permite que el texto del botón se divida en varias líneas */
-  padding: 10px 20px; /* Ajusté el padding para dispositivos móviles */
+  white-space: normal;
+  padding: 10px 20px; 
 }
 
 .cta-button:hover {
@@ -70,7 +70,7 @@ export default {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos responsivos */
+
 @media (max-width: 960px) {
   .cta-title {
     font-size: 2rem;
@@ -87,20 +87,20 @@ export default {
   }
 
   .cta-title {
-    font-size: 1.5rem; /* Reduje el tamaño de la fuente para dispositivos móviles */
-    padding: 0 10px; /* Ajusté el padding para dispositivos móviles */
+    font-size: 1.5rem;
+    padding: 0 10px; 
   }
 
   .cta-description {
     font-size: 0.9rem;
-    padding: 0 10px; /* Ajusté el padding para dispositivos móviles */
+    padding: 0 10px; 
   }
 
   .cta-button {
     font-size: 14px;
     padding: 8px 16px;
-    width: 90%; /* Ajusté el ancho del botón para dispositivos móviles */
-    margin: 0 auto; /* Centré el botón */
+    width: 90%; 
+    margin: 0 auto; 
   }
 }
 </style>

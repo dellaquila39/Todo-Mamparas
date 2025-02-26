@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="workfamily-container pa-0">
-    <!-- Sección Hero con Fondo Fijo -->
+
     <div class="fixed-hero">
       <div class="hero-overlay">
         <v-container>
@@ -30,7 +30,6 @@
       </div>
     </div>
 
-    <!-- Sección del CEO Rediseñada -->
     <section ref="contentSection" class="ceo-section py-16">
       <v-container>
         <v-row align="center" justify="center">
@@ -76,7 +75,6 @@
       </v-container>
     </section>
 
-    <!-- CTA Final -->
     <div class="cta-section text-center py-16">
       <h2 class="cta-title mb-4">¿Queres Ser Parte de Nuestra Familia?</h2>
       <p class="cta-subtitle mb-8">Asociate con Nosotros y Construyamos el Futuro</p>

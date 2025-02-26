@@ -1,9 +1,7 @@
 <template>
   <v-container class="service-container">
-    <!-- Título -->
-    <h1 class="text-center modern-title">SERVICIOS</h1>
 
-    <!-- Tarjetas de servicios -->
+    <h1 class="text-center modern-title">SERVICIOS</h1>
     <v-row justify="center">
       <v-col
         v-for="(service, index) in services"
@@ -116,7 +114,6 @@ export default {
   color: #333;
 }
 
-/* Estilos responsivos */
 @media (max-width: 960px) {
   .modern-title {
     font-size: 2rem;

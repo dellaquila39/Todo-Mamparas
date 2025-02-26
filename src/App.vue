@@ -1,13 +1,12 @@
 <template>
   <v-app class="app-container">
-    <!-- Barra de navegación dinámica -->
+
     <v-app-bar app v-show="showNavigationBar" :elevate-on-scroll="true">
       <NavigationBar />
     </v-app-bar>
 
-    <!-- Contenido principal -->
     <v-main>
-      <!-- Ruta principal -->
+
       <template v-if="$route.path === '/'">
         <MainScreen id="inicio" class="main-screen" />
         <PhotoCarousel id="catalogo" class="photo-carousel" />
@@ -18,11 +17,9 @@
         <WorkFamily class="work-family" />
       </template>
 
-      <!-- Otras rutas -->
       <router-view v-else />
     </v-main>
 
-    <!-- Footer (ahora fuera del v-main) -->
     <Footer class="footer" />
   </v-app>
 </template>
@@ -55,7 +52,7 @@ export default {
     return {
       showNavigationBar: true,
       lastScrollPosition: 0,
-      scrollThreshold: 50, // Umbral para ocultar/mostrar la barra
+      scrollThreshold: 50,
     };
   },
   mounted() {
@@ -68,7 +65,6 @@ export default {
     handleScroll() {
       const currentScrollPosition = window.scrollY;
 
-      // Oculta la barra si el scroll es hacia abajo y supera el umbral
       if (Math.abs(currentScrollPosition - this.lastScrollPosition) > this.scrollThreshold) {
         this.showNavigationBar = currentScrollPosition < this.lastScrollPosition;
         this.lastScrollPosition = currentScrollPosition;
@@ -79,7 +75,7 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos base */
+
 .app-container {
   width: 100%;
   min-height: 100vh;
@@ -88,12 +84,11 @@ export default {
   flex-direction: column;
 }
 
-/* Asegura que el contenido principal ocupe el espacio restante */
+
 .v-main {
   flex: 1;
 }
 
-/* Espaciado entre secciones - Versión Mejorada */
 .main-screen,
 .photo-carousel,
 .service,
@@ -102,15 +97,14 @@ export default {
 .gallery-cta,
 .work-family {
   margin-bottom: 100px;
-  scroll-margin-top: 100px; /* Para compensar la barra fija */
+  scroll-margin-top: 100px; 
 }
 
-/* Estilos para el Footer */
+
 .footer {
-  flex-shrink: 0; /* Evita que el Footer se encoja */
+  flex-shrink: 0; 
 }
 
-/* Responsive Design */
 @media (max-width: 1264px) {
   .main-screen,
   .photo-carousel,

@@ -1,6 +1,5 @@
 <template>
   <v-container fluid class="hero-container pa-0">
-    <!-- Imagen optimizada -->
     <v-img
       :src="require('@/assets/fondos/fondo00.webp')"
       alt="Mamparas de lujo modernas"
@@ -10,25 +9,20 @@
       cover
       eager
     >
-      <!-- Contenido estratificado -->
       <div class="content-overlay">
         <v-row align="center" justify="center" class="fill-height">
           <v-col cols="12" md="10" lg="8" class="text-center">
-            <!-- Titulo simplificado -->
             <h1 class="hero-title">
               Todo en Mampara! <br> Excelencia en vidrios de Lujo
             </h1>
 
-            <!-- Separador decorativo -->
             <v-divider class="my-8 mx-auto accent" style="max-width: 200px"></v-divider>
 
-            <!-- Texto destacado -->
             <p class="hero-subtitle">
               Transformamos tus espacios con diseño arquitectónico<br>
               y materiales premium
             </p>
 
-            <!-- Botón de acción -->
             <v-btn
               class="cta-button mt-12"
               x-large
@@ -54,7 +48,6 @@ export default {
   name: "MainScreen",
 
   mounted() {
-    // Precarga la imagen principal
     const img = new Image();
     img.src = require('@/assets/fondos/fondo00.webp');
   }
@@ -135,7 +128,6 @@ export default {
   box-shadow: 0 12px 32px rgba(18, 140, 126, 0.5) !important;
 }
 
-/* Animaciones minimalistas personalizadas */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -146,7 +138,6 @@ export default {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Design */
 @media (max-width: 960px) {
   .hero-title {
     font-size: 2.5rem;

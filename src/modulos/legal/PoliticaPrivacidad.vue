@@ -2,16 +2,14 @@
   <v-container class="privacy-container">
     <v-row class="justify-center">
       <v-col cols="12" md="10" lg="8">
-        <!-- Encabezado -->
+
         <div class="text-center mb-8">
           <h1 class="privacy-title primary--text">Política de Privacidad</h1>
           <p class="update-date">Última actualización: 22 de Febrero de 2025</p>
           <v-divider class="my-4"></v-divider>
         </div>
 
-        <!-- Contenido -->
         <v-list class="privacy-content" dense>
-          <!-- Sección 1: Información que Recopilamos -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">1. Información que Recopilamos</h2>
@@ -32,7 +30,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 2: Uso de la Información -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">2. Uso de la Información</h2>
@@ -46,7 +43,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 3: Compartición de Información -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">3. Compartición de Información</h2>
@@ -56,7 +52,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 4: Seguridad de la Información -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">4. Seguridad de la Información</h2>
@@ -66,7 +61,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 5: Cookies -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">5. Cookies</h2>
@@ -76,7 +70,6 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- Sección 6: Cambios en la Política de Privacidad -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">6. Cambios en la Política de Privacidad</h2>
@@ -86,7 +79,6 @@
             </v-list-item-content>
           </v-list-item>
           
-          <!-- Sección 7: Contacto -->
           <v-list-item>
             <v-list-item-content>
               <h2 class="section-title">7. Contacto</h2>

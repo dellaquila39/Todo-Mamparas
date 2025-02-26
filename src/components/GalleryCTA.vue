@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="gallery-cta">
     <v-row align="center" class="flex-column flex-md-row">
-      <!-- Sección de Texto Optimizada -->
+
       <v-col cols="12" md="7" class="text-content pa-6 pa-md-8 order-0 order-md-0">
         <div class="text-wrapper">
           <div class="header-group mb-4">
@@ -22,7 +22,7 @@
             <v-icon small color="accent" class="ml-1">mdi-camera</v-icon>
           </p>
 
-          <!-- Botón desktop optimizado -->
+
           <v-btn 
             x-large 
             color="primary" 
@@ -38,7 +38,7 @@
         </div>
       </v-col>
 
-      <!-- Sección Visual Mejorada -->
+
       <v-col cols="12" md="5" class="visual-section pa-0 order-1 order-md-1">
         <div class="glass-container">
           <div class="gallery-preview">
@@ -71,11 +71,11 @@
           </div>
         </div>
         
-        <!-- Overlay de vidrio optimizado -->
+
         <div class="glass-overlay"></div>
       </v-col>
 
-      <!-- Botón mobile optimizado -->
+
       <v-col cols="12" class="text-center order-2 d-md-none">
         <v-btn 
           x-large 
@@ -122,7 +122,7 @@ export default {
       this.$router.push('/gallery');
     },
     generateLowResPlaceholder(image) {
-      // Lógica para generar placeholder de baja resolución
+
       return image.replace(/(\.\w+)$/, '-low$1');
     }
   },
@@ -136,7 +136,7 @@ export default {
   padding: 80px 0;
 }
 
-/* Optimización de Tipografía */
+
 .text-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -151,7 +151,7 @@ export default {
   color: #2A3B5D;
 }
 
-/* Mejoras de Rendimiento Visual */
+
 .glass-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
@@ -201,9 +201,9 @@ export default {
   left: 0;
   width: 100%;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para mejorar la legibilidad */
+  background: rgba(0, 0, 0, 0.6);
   color: white;
-  opacity: 0.8; /* Opacidad por defecto */
+  opacity: 0.8; 
   transition: opacity 0.3s ease;
   mix-blend-mode: screen;
   display: flex;
@@ -217,13 +217,13 @@ export default {
 
 .caption {
   font-family: 'Inter', sans-serif;
-  font-size: 1.2rem; /* Tamaño de fuente aumentado */
+  font-size: 1.2rem; 
   color: white;
   font-weight: 500;
   letter-spacing: 0.3px;
 }
 
-/* Optimización de Animaciones */
+
 .text-reveal {
   display: inline-block;
   overflow: hidden;
@@ -235,7 +235,7 @@ export default {
   to { transform: translateY(0); }
 }
 
-/* Preloader optimizado */
+
 .image-preloader {
   width: 100%;
   height: 100%;
@@ -249,7 +249,7 @@ export default {
   100% { background-color: #f0f2f5; }
 }
 
-/* Mejoras Responsive */
+
 @media (max-width: 960px) {
   .gallery-cta {
     padding: 60px 0;
