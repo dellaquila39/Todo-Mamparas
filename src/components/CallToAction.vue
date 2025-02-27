@@ -11,8 +11,7 @@
           dark
           large
           class="cta-button"
-          href="https://wa.me/5491134494555" 
-          target="_blank"
+          @click="openWhatsApp"
         >
           <v-icon left>mdi-whatsapp</v-icon>
           Obtener un presupuesto gratuito
@@ -26,6 +25,12 @@
 export default {
   name: "CallToAction",
 
+  methods: {
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  }
 };
 </script>
 

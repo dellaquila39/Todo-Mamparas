@@ -36,8 +36,7 @@
             color="green darken-1"
             dark
             x-large
-            href="https://wa.me/5491134494555" 
-            target="_blank"
+            @click="openWhatsApp"
             class="animated-button"
           >
           +54 9 11 3449-4555
@@ -86,6 +85,13 @@
 export default {
   name: "ContactoView",
 
+  methods: {
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+  }
 };
 </script>
 

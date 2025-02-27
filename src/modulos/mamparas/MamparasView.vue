@@ -13,7 +13,9 @@
             Permítenos envolver tus sentidos en un mundo de belleza y elegancia.
           </p>
           <MamparasCarousel :mamparas="mamparas" />
-          <button class="btn-whatsapp">
+          <button 
+          class="btn-whatsapp"
+          @click="openWhatsApp">
             <v-icon left dark>mdi-whatsapp</v-icon>
             Contactar por WhatsApp
           </button>
@@ -76,6 +78,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
   },
   mounted() {
     window.scrollTo(0, 0);

@@ -50,8 +50,7 @@
           <v-btn 
             icon 
             color="#25D366"
-            href="https://wa.me/5491134494555" 
-            target="_blank"
+            @click="openWhatsApp"
             class="social-icon"
             v-on="on"
           >
@@ -104,12 +103,16 @@ export default {
   name: 'NavigationBar',
   computed: {
     iconSize() {
-      return this.$vuetify.breakpoint.smAndDown ? '28px' : '32px'
+      return this.$vuetify.breakpoint.smAndDown ? '28px' : '32px';
     }
   },
   methods: {
     goToStartView() {
-      this.$router.push('/');
+      if (this.$route.path !== '/') {
+        this.$router.push('/');
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     },
     scrollToSection(anchor) {
       if (this.$route.path !== '/') {
@@ -130,6 +133,10 @@ export default {
           block: 'start'
         });
       }
+    },
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   }
 };

@@ -14,7 +14,7 @@
             />
           </div>
           <p class="company-description">
-            Especialistas en soluciones de vidrio arquitectónico desde 2021. 
+            Especialistas en soluciones de vidrio arquitectónico desde 2023. 
             Transformando espacios con calidad y diseño innovador.
           </p>
           <div class="social-icons mt-4">
@@ -147,8 +147,8 @@ export default {
     socialMedia: [
       { icon: 'mdi-facebook', link: 'https://www.facebook.com/share/159Fo8pesp/' },
       { icon: 'mdi-instagram', link: 'https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy' },
-      { icon: 'mdi-linkedin', link: '#' },
-      { icon: 'mdi-youtube', link: '#' }
+      { icon: 'mdi-linkedin', link: '' },
+      { icon: 'mdi-youtube', link: '' }
     ]
   }),
   methods: {

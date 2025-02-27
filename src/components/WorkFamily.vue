@@ -81,8 +81,7 @@
       <v-btn x-large 
       color="primary" 
       class="cta-btn"
-      href="https://wa.me/5491134494555" 
-      target="_blank"
+      @click="openWhatsApp"
       > 
       <v-icon left>mdi-account-group</v-icon>
         Hablemos de Negocios
@@ -97,6 +96,10 @@ export default {
   methods: {
     scrollToContent() {
       this.$refs.contentSection.scrollIntoView({ behavior: 'smooth' });
+    },
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   }
 };

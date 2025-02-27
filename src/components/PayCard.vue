@@ -20,7 +20,6 @@
             :elevation="hover ? 6 : 2"
             class="payment-card"
             :class="{ 'glass-effect': isGlassEffect }"
-            @mouseover="hoverAnimation(index)"
           >
             <v-icon
               size="64"

@@ -14,7 +14,9 @@
             Déjanos envolverte en un mundo de sofisticación y elegancia, donde cada detalle se convierte en un reflejo de tu personalidad.
           </p>
           <EspejosCarousel :espejos="espejos" />
-          <button class="btn-whatsapp">
+          <button 
+          class="btn-whatsapp"
+          @click="openWhatsApp">
             <v-icon left dark>mdi-whatsapp</v-icon>
             Contactar por WhatsApp
           </button>
@@ -80,6 +82,13 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+  },
+
+  methods: {
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
   },
 };
 </script>

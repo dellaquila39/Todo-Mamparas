@@ -28,8 +28,7 @@
               x-large
               rounded
               color="accent"
-              href="https://wa.me/5491134494555" 
-              target="_blank"
+              @click="openWhatsApp"
               dark
             >
               <v-icon left size="28" class="mr-2">mdi-whatsapp</v-icon>
@@ -47,6 +46,12 @@
 export default {
   name: "MainScreen",
 
+  methods: {
+    openWhatsApp() {
+      const url = "https://wa.me/5491134494555";
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  },
   mounted() {
     const img = new Image();
     img.src = require('@/assets/fondos/fondo00.webp');
