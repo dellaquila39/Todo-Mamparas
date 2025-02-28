@@ -3,7 +3,7 @@
 
     <v-avatar class="logo" size="120" tile>
       <img 
-        :src="require('@/assets/logos/logo2.png')" 
+        :src="require('@/assets/logos/logo2.webp')" 
         alt="Logo Todo Mamparas"
         class="logo-image"
       >

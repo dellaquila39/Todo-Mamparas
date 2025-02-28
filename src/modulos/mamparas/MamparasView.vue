@@ -49,22 +49,22 @@ export default {
         {
           titulo: "Mampara de Vidrio Opacid",
           descripcion: "Vidrio translúcido que permite la entrada de luz",
-          imagen: require("../../assets/cartas/opacid1.png"),
+          imagen: require("../../assets/cartas/opacid1.webp"),
         },
         {
           titulo: "Mampara de Vidrio Oscuro",
           descripcion: "Vidrio tintado, reduce la luz y la visibilidad",
-          imagen: require("../../assets/cartas/oscuro1.jpg"),
+          imagen: require("../../assets/cartas/oscuro1.webp"),
         },
         {
           titulo: "Mampara de Vidrio Fijo",
           descripcion: "Vidrio fijo sin sistema de apertura de facil instalación",
-          imagen: require("../../assets/cartas/fija1.png"),
+          imagen: require("../../assets/cartas/fija1.webp"),
         },
         {
           titulo: "Mampara Corrediza",
           descripcion: "Vidrio con sistema deslizante para mayor comodidad",
-          imagen: require("../../assets/cartas/corrediza1.jpg"),
+          imagen: require("../../assets/cartas/corrediza1.webp"),
         },
         {
           titulo: "Box de Ducha",
@@ -74,7 +74,7 @@ export default {
         {
           titulo: "Mampara Bisagra",
           descripcion: "Mampara de vidrio con sitema de bisagra",
-          imagen: require("../../assets/cartas/bisagra1.jpg"),
+          imagen: require("../../assets/cartas/bisagra1.webp"),
         },
       ],
     };
@@ -93,7 +93,7 @@ export default {
 
 <style scoped>
 .fondo-mamparas {
-  background-image: url('~@/assets/fondos/fondo2.jpg');
+  background-image: url('~@/assets/fondos/fondo2.webp');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

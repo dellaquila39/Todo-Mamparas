@@ -143,7 +143,7 @@ export default {
     submitForm() {
       if (this.$refs.form.validate()) {
         // fornmulario en espera de lucas
-        console.log('Formulario enviado:', this.form)
+        
         // reseteo si es necesario por lucas 
         this.$refs.form.reset()
       }

@@ -50,22 +50,22 @@ export default {
         {
           titulo: "Espejo Empotrado",
           descripcion: "Espejos que se instalan directamente en la pared, sin protuberancias, creando un aspecto limpio y minimalista.",
-          imagen: require("../../assets/espejos/empotrado.png"),
+          imagen: require("../../assets/espejos/empotrado.webp"),
         },
         {
           titulo: "Espejo con Luz Led",
           descripcion: "Proporcionan iluminación funcional y estética, ideal para generar ambientes modernos",
-          imagen: require("../../assets/espejos/luminoso.jpg"),
+          imagen: require("../../assets/espejos/luminoso.webp"),
         },
         {
           titulo: "Espejo con Marco",
           descripcion: "Añaden un toque estético y pueden adaptarse a diferentes estilos (moderno, rústico, vintage, etc.).",
-          imagen: require("../../assets/espejos/marco-diseño.jpg"),
+          imagen: require("../../assets/espejos/marco-diseño.webp"),
         },
         {
           titulo: "Espejo Decorativo",
           descripcion: "Espejos con formas no convencionales (redondos, ovalados, hexagonales, etc.) o diseños artísticos.",
-          imagen: require("../../assets/espejos/forma.jpg"),
+          imagen: require("../../assets/espejos/forma.webp"),
         },
         {
           titulo: "Espejo de Pared Completa",
@@ -75,7 +75,7 @@ export default {
         {
           titulo: "Espejo de Cuerpo Entero",
           descripcion: "Espejos largos que permiten verse de pies a cabeza, Ideales para vestidoresn.",
-          imagen: require("../../assets/espejos/cuerpo-entero.png"),
+          imagen: require("../../assets/espejos/cuerpo-entero.webp"),
         },
       ],
     };
@@ -96,7 +96,7 @@ export default {
 <style scoped>
 
 .fondo-espejos {
-  background-image: url('~@/assets/fondos/fondo2.jpg');
+  background-image: url('~@/assets/fondos/fondo2.webp');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

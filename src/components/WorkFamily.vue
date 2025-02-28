@@ -117,7 +117,7 @@ export default {
   overflow: hidden;
   background: 
     linear-gradient(45deg, rgba(18, 32, 47, 0.8) 0%, rgba(38, 61, 86, 0.6) 100%),
-    url('../assets/familia/construccion.jpg');
+    url('../assets/familia/construccion.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -100,19 +100,19 @@ export default {
   data: () => ({
     previewProjects: [
     {
-  image: require('@/assets/proyectos/proyecto-cerramiento.jpg'),
+  image: require('@/assets/proyectos/proyecto-cerramiento.webp'),
   title: 'Cerramientos Modernos'
 },
 {
-  image: require('@/assets/proyectos/proyecto-baranda.jpg'),
+  image: require('@/assets/proyectos/proyecto-baranda.webp'),
   title: 'Barandas Elegantes'
 },
 {
-  image: require('@/assets/proyectos/proyecto-mampara.png'),
+  image: require('@/assets/proyectos/proyecto-mampara.webp'),
   title: 'Mamparas de Diseño'
 },
 {
-  image: require('@/assets/proyectos/proyecto-oficina.jpg'),
+  image: require('@/assets/proyectos/proyecto-oficina.webp'),
   title: 'Divisiones de Oficina'
 }
     ]

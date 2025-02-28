@@ -53,27 +53,27 @@ export default {
         {
           titulo: "Cerramientos Corredizos",
           descripcion: "Paneles de vidrio que se deslizan horizontalmente sobre rieles.",
-          imagen: require("../../assets/cerramientos/corredizo.png"),
+          imagen: require("../../assets/cerramientos/corredizo.webp"),
         },
         {
           titulo: "Cerramientos Fijos",
           descripcion: "Paneles de vidrio que no se abren, utilizados principalmente para dividir espacios",
-          imagen: require("../../assets/cerramientos/fijos.jpg"),
+          imagen: require("../../assets/cerramientos/fijos.webp"),
         },
         {
           titulo: "Cerramientos Mixtos",
           descripcion: "Combinan vidrio con otros materiales como aluminio o madera, ofreciendo lo mejor de ambos mundos.",
-          imagen: require("../../assets/cerramientos/mixto.jpg"),
+          imagen: require("../../assets/cerramientos/mixto.webp"),
         },
         {
           titulo: "Cerramientos con Cierre Multipunto",
           descripcion: "Sistemas de cerramiento que incluyen múltiples puntos de bloqueo para mayor seguridad y aislamiento.",
-          imagen: require("../../assets/cerramientos/multipunto.jpg"),
+          imagen: require("../../assets/cerramientos/multipunto.webp"),
         },
         {
           titulo: "Cerramientos Plegables",
           descripcion: "Compuestos por paneles de vidrio que se pliegan sobre sí mismos, estos cerramientos permiten abrir completamente un espacio.",
-          imagen: require("../../assets/cerramientos/plegable (2).jpg"),
+          imagen: require("../../assets/cerramientos/plegable (2).webp"),
         },
       ],
     };
@@ -95,7 +95,7 @@ export default {
 <style scoped>
 
 .contenedor-cerramientos {
-  background-image: url('~@/assets/fondos/fondo2.jpg');
+  background-image: url('~@/assets/fondos/fondo2.webp');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

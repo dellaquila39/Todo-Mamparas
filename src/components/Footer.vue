@@ -7,7 +7,7 @@
         <v-col cols="12" md="4" class="footer-section">
           <div class="logo-container mb-4">
             <v-img
-              :src="require('@/assets/logos/logo1.jpg')"
+              :src="require('@/assets/logos/logo1.webp')"
               max-width="180"
               contain
               class="footer-logo"

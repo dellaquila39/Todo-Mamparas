@@ -68,7 +68,7 @@ export default {
         {
           title: "Barandas de Vidrio",
           description: "Elevar la seguridad y el estilo de tus espacios con nuestras barandas de vidrio...",
-          image: require('@/assets/trabajo/fondo3.jpeg'),
+          image: require('@/assets/trabajo/fondo3.webp'),
           icon: "mdi-blinds-vertical-closed",
           color: "primary darken-3",
           route: "/barandas",
@@ -77,7 +77,7 @@ export default {
         {
           title: "Cerramientos de Vidrio",
           description: "Creá espacios abiertos y luminosos con nuestros cerramientos de vidrio...",
-          image: require('@/assets/trabajo/fondo4.jpg'),
+          image: require('@/assets/trabajo/fondo4.webp'),
           icon: "mdi-wall",
           color: "primary darken-3",
           route: "/cerramientos",
@@ -86,7 +86,7 @@ export default {
         {
           title: "Espejos",
           description: "Transformá tus espacios con nuestros espejos y estilos mas modernos...",
-          image: require('@/assets/cartas/espejo.jpg'),
+          image: require('@/assets/cartas/espejo.webp'),
           icon: "mdi-mirror",
           color: "primary darken-3",
           route: "/espejos",

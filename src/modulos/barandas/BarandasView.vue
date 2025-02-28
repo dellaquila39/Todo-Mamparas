@@ -50,27 +50,27 @@ export default {
         {
           titulo: "Baranda de Vidrio Sin Marco",
           descripcion: "Diseño minimalista y moderno, Máxima transparencia.",
-          imagen: require("../../assets/cartas/baranda1.png"),
+          imagen: require("../../assets/cartas/baranda1.webp"),
         },
         {
           titulo: "Baranda con Perfil de Aluminio",
           descripcion: "Vidrio insertado en perfiles de aluminio para mayor resistencia.",
-          imagen: require("../../assets/cartas/baranda2.png"),
+          imagen: require("../../assets/cartas/baranda2.webp"),
         },
         {
           titulo: "Baranda Mixta (Vidrio y Pasamanos de Acero)",
           descripcion: "Estética moderna con mayor seguridad y versatilidad de diseño.",
-          imagen: require("../../assets/cartas/baranda3.png"),
+          imagen: require("../../assets/cartas/baranda3.webp"),
         },
         {
           titulo: "Baranda Curvada",
           descripcion: "Ideal para escaleras curvas con estética sofisticada.",
-          imagen: require("../../assets/cartas/baranda4.png"),
+          imagen: require("../../assets/cartas/baranda4.webp"),
         },
         {
           titulo: "Baranda con Herrajes Puntuales",
           descripcion: "Vidrio sujetado por herrajes metálicos con Diseño flotante",
-          imagen: require("../../assets/cartas/baranda5.png"),
+          imagen: require("../../assets/cartas/baranda5.webp"),
         },
       ],
     };
@@ -92,7 +92,7 @@ export default {
 <style scoped>
 
 .contenedor-barandas {
-  background-image: url('~@/assets/fondos/baranda.jpg');
+  background-image: url('~@/assets/fondos/baranda.webp');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
