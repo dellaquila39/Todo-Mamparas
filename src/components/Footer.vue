@@ -110,7 +110,7 @@
         
         <v-col cols="12" md="6" class="developer-credit">
           <span class="credit-text">
-            Desarrollado con ❤️ por Agustin Dell Aquila
+            Desarrollado por Agustin Dell Aquila
             <a 
             href="https://wa.me/5491138185204" 
               target="_blank" 
