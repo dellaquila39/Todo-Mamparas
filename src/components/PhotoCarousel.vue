@@ -8,7 +8,6 @@
     >
       <v-card class="section-card">
         <v-row no-gutters class="align-stretch">
-          <!-- Columna de texto -->
           <v-col cols="12" md="6" class="text-content">
             <div class="text-wrapper d-flex flex-column justify-center">
               <div class="decorative-line mx-auto"></div>
@@ -30,7 +29,6 @@
             </div>
           </v-col>
 
-          <!-- Columna de imagen -->
           <v-col cols="12" md="6" class="image-content pa-0">
             <v-img
               :src="section.image"
@@ -39,7 +37,6 @@
               cover
               class="fill-height"
             >
-              <!-- Placeholder durante la carga -->
               <template #placeholder>
                 <div class="image-preloader"></div>
               </template>
@@ -60,7 +57,7 @@ export default {
         {
           title: "Mamparas de Vidrio",
           description: "Despierta la elegancia en tus espacios con nuestras mamparas de vidrio de alta calidad...",
-          image: require('@/assets/trabajo/mampara2.webp?w=1920&q=75'), // Optimizada
+          image: require('@/assets/trabajo/mampara2.webp?w=1920&q=75'),
           icon: "mdi-shower",
           color: "primary darken-3",  
           route: "/mamparas",
@@ -69,7 +66,7 @@ export default {
         {
           title: "Barandas de Vidrio",
           description: "Elevar la seguridad y el estilo de tus espacios con nuestras barandas de vidrio...",
-          image: require('@/assets/trabajo/fondo3.webp?w=1920&q=75'), // Optimizada
+          image: require('@/assets/trabajo/fondo3.webp?w=1920&q=75'),
           icon: "mdi-blinds-vertical-closed",
           color: "primary darken-3",
           route: "/barandas",
@@ -78,7 +75,7 @@ export default {
         {
           title: "Cerramientos de Vidrio",
           description: "Creá espacios abiertos y luminosos con nuestros cerramientos de vidrio...",
-          image: require('@/assets/trabajo/fondo4.webp?w=1920&q=75'), // Optimizada
+          image: require('@/assets/trabajo/fondo4.webp?w=1920&q=75'),
           icon: "mdi-wall",
           color: "primary darken-3",
           route: "/cerramientos",
@@ -87,7 +84,7 @@ export default {
         {
           title: "Espejos",
           description: "Transformá tus espacios con nuestros espejos y estilos más modernos...",
-          image: require('@/assets/cartas/espejo.webp?w=800&q=80'), // Optimizada (tamaño menor)
+          image: require('@/assets/cartas/espejo.webp?w=800&q=80'),
           icon: "mdi-mirror",
           color: "primary darken-3",
           route: "/espejos",
@@ -98,7 +95,7 @@ export default {
   },
   methods: {
     goToView(route) {
-      this.$router.push(route); // Navegación programática
+      this.$router.push(route); 
     }
   }
 };
