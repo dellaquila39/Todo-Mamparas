@@ -17,7 +17,7 @@
         Inicio
       </v-btn>
       <v-btn text to="/contacto" class="nav-link"> 
-        <v-icon left>mdi-email-send</v-icon>
+        <v-icon left>mdi-phone</v-icon>
         Contacto
       </v-btn>
       <v-btn text @click="scrollToSection('proyectos')" class="nav-link">

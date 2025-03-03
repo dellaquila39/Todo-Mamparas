@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="hero-container pa-0">
     <v-img
-      :src="require('@/assets/fondos/fondo00.webp')"
+      :src="optimizedImage"
       alt="Mamparas de lujo modernas"
       class="hero-image"
       height="100vh"
@@ -45,16 +45,17 @@
 <script>
 export default {
   name: "MainScreen",
-
+  data: () => ({
+    optimizedImage: null
+  }),
+  mounted() {
+    this.optimizedImage = require('@/assets/fondos/fondo00.webp?w=1920&q=75')
+  },
   methods: {
     openWhatsApp() {
       const url = "https://wa.me/5491134494555";
       window.open(url, "_blank", "noopener,noreferrer");
     }
-  },
-  mounted() {
-    const img = new Image();
-    img.src = require('@/assets/fondos/fondo00.webp');
   }
 };
 </script>
@@ -70,19 +71,8 @@ export default {
   position: relative;
   background-size: cover;
   background-position: center;
-  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-.hero-image::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(25, 45, 66, 0.233) 0%, rgba(0, 0, 0, 0.274) 100%);
+  transform: translateZ(0);
 }
 
 .content-overlay {
@@ -98,10 +88,10 @@ export default {
   line-height: 1.2;
   color: #ffffff;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  letter-spacing: -0.5px;
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
+  will-change: transform, opacity; /* Optimización de animaciones */
 }
 
 .hero-subtitle {
@@ -113,6 +103,7 @@ export default {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   opacity: 0;
   animation: fadeIn 0.8s ease-out 0.3s forwards;
+  will-change: transform, opacity;
 }
 
 .cta-button {
@@ -126,11 +117,7 @@ export default {
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
   opacity: 0;
   animation: fadeInUp 0.8s ease-out 0.6s forwards;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(18, 140, 126, 0.5) !important;
+  will-change: transform, opacity;
 }
 
 @keyframes fadeIn {
@@ -144,36 +131,14 @@ export default {
 }
 
 @media (max-width: 960px) {
-  .hero-title {
-    font-size: 2.5rem;
-    line-height: 1.3;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .cta-button {
-    padding: 16px 32px !important;
-    font-size: 1rem !important;
-  }
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .cta-button { padding: 16px 32px !important; }
 }
 
 @media (max-width: 600px) {
-  .hero-title {
-    font-size: 2rem;
-    padding: 0 20px;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 0 15px;
-  }
-
-  .cta-button {
-    padding: 14px 28px !important;
-    font-size: 0.9rem !important;
-  }
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .cta-button { padding: 14px 28px !important; }
 }
 </style>
