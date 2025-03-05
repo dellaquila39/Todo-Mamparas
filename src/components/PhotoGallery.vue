@@ -127,13 +127,13 @@ export default {
 },
 {
   title: 'Box de ducha Opacid',
-  description: 'Transformación con vidrio templado esmerilado', 
+  description: 'Transformación con vidrio templado esmerilado con diseño', 
   before: require('@/assets/antes-despues/antes3.jpg'),
   after: require('@/assets/antes-despues/despues3.jpg')
 },
 {
-  title: 'Box de ducha Semi Transparente',
-  description: 'Transformación con vidrio templado transparente y esmerilado',
+  title: 'Box de ducha Opacid',
+  description: 'Transformación con vidrio templado esmerilado con diseño',
   before: require('@/assets/antes-despues/antes4.jpg'),
   after: require('@/assets/antes-despues/despues4.jpg')
 },
@@ -145,7 +145,7 @@ export default {
 },
 {
   title: 'Mampara de Baño Corrediza (2 paños)',
-  description: 'Transformación con vidrio templado semi transparente',
+  description: 'Transformación con vidrio templado esmerilado con diseño',
   before: require('@/assets/antes-despues/antes6.jpg'),
   after: require('@/assets/antes-despues/despues6.jpg')
 },
@@ -157,7 +157,7 @@ export default {
 },
 {
   title: 'Mampara de Baño Corrediza (2 paños)',
-  description: 'Transformación con vidrio templado semi transparente',
+  description: 'Transformación con vidrio templado esmerilado con diseño',
   before: require('@/assets/antes-despues/antes8.jpg'),
   after: require('@/assets/antes-despues/despues8.jpg')
 },
@@ -169,7 +169,7 @@ export default {
 },
 {
   title: 'Mampara de baño Fija',
-  description: 'Transformación con vidrio templado semi transparente',
+  description: 'Transformación con vidrio templado esmerilado con diseño',
   before: require('@/assets/antes-despues/antes10.jpg'),
   after: require('@/assets/antes-despues/despues10.jpg')
 },
