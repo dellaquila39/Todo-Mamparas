@@ -1,0 +1,5 @@
+[[redirects]]  
+  from = "www.todomampara.netlify.app/*"  
+  to = "https://todomampara.netlify.app/:splat"  
+  status = 301  
+  force = true  
