@@ -64,7 +64,7 @@
                   <a href="https://www.instagram.com/todo.en.mamparas?igsh=dTBuajFuZjRlOTAy" target="_blank" class="social-link">
                     <v-icon>mdi-instagram</v-icon>
                   </a>
-                  <a href="mailto:chacalinquieto@gmail.com" class="social-link">
+                  <a href="mailto:todoenmamparaslc@gmail.com" class="social-link">
                     <v-icon>mdi-email</v-icon>
                   </a>
                 </div>

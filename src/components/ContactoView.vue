@@ -39,7 +39,7 @@
             @click="openWhatsApp"
             class="animated-button"
           >
-          +54 9 11 3449-4555
+          WhatsApp
           </v-btn>
         </div>
       </v-col>
@@ -56,7 +56,7 @@
             class="animated-button"
             target="_blank"
           >
-            @todomamparas
+            @todomampara
           </v-btn>
         </div>
       </v-col>
@@ -69,11 +69,11 @@
             color="blue darken-1"
             dark
             x-large
-            href="mailto:chacalinquieto@gmail.com" 
+            href="mailto:todoenmamparaslc@gmail.com" 
             class="animated-button email-button"
             target="_blank"
           >
-          chacalinquieto@gmail.com
+          todoenmamparaslc@gmail.com
           </v-btn>
         </div>
       </v-col>

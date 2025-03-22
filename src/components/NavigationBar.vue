@@ -65,7 +65,7 @@
           <v-btn 
             icon 
             color="#D50029"
-            href="mailto:chacalinquieto@gmail.com" 
+            href="mailto:todoenmamparaslc@gmail.com" 
             class="social-icon"
             v-on="on"
           >

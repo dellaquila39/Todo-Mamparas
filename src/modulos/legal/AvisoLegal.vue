@@ -19,7 +19,7 @@
               <ul class="info-list">
                 <li><strong>Dirección:</strong> General Rodriguez 1748, Buenos Aires, Argentina</li>
                 <li><strong>Teléfono:</strong> +54 9 11 3449-4555</li>
-                <li><strong>Correo electrónico:</strong> chacalinquieto@gmail.com</li>
+                <li><strong>Correo electrónico:</strong> todoenmamparaslc@gmail.com</li>
               </ul>
             </v-list-item-content>
           </v-list-item>

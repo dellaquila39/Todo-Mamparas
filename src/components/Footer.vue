@@ -91,7 +91,7 @@
                 <v-icon>mdi-email</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title>chacalinquieto@gmail.com</v-list-item-title>
+                <v-list-item-title>todoenmamparaslc@gmail.com</v-list-item-title>
                 <v-list-item-subtitle>Soporte 24/7</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
@@ -116,7 +116,7 @@
               target="_blank" 
               class="developer-link"
             >
-              Della Dev-Studio
+              Della Dev Studio
             </a>
           </span>
         </v-col>
