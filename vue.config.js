@@ -2,6 +2,13 @@ module.exports = {
   transpileDependencies: [
     'vuetify'
   ],
+}  
+
+  module.exports = {
+    publicPath: "/", // ✅ Añade esto aquí (asegura rutas absolutas)
+    transpileDependencies: [
+      'vuetify'
+    ],
   
   chainWebpack: (config) => {
     // optimiza las imagenes para mejorar el rendimiento

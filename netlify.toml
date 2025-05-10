@@ -1,5 +1,16 @@
-[[redirects]]  
-  from = "www.todomampara.netlify.app/*"  
-  to = "https://todomampara.netlify.app/:splat"  
-  status = 301  
-  force = true  
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirección para el SPA (manejo de rutas)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Redirección HTTPS + www (opcional, si ya está en _redirects)
+[[redirects]]
+  from = "http://todomampara.com/*"
+  to = "https://www.todomampara.com/:splat"
+  status = 301
+  force = true

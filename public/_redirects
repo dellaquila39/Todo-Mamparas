@@ -1,1 +1,5 @@
-http://todomampara.com/* https://www.todomampara.com/:splat 301!
+# Primero maneja las rutas del SPA
+/*    /index.html   200
+
+# Luego las redirecciones HTTPS y www
+http://todomampara.com/*    https://www.todomampara.com/:splat    301!
