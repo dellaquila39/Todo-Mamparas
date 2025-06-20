@@ -15,6 +15,7 @@
         <CallToAction class="call-to-action" />
         <GalleryCTA id="proyectos" class="gallery-cta" />
         <WorkFamily class="work-family" />
+        <SocialQR class="social-qr" />
       </template>
 
       <router-view v-else />
@@ -33,6 +34,7 @@ import Service from './components/Service.vue';
 import PayCard from './components/PayCard.vue';
 import GalleryCTA from './components/GalleryCTA.vue';
 import WorkFamily from './components/WorkFamily.vue';
+import SocialQR from './components/SocialQR.vue';
 import Footer from './components/Footer.vue';
 
 export default {
@@ -46,6 +48,7 @@ export default {
     PayCard,
     GalleryCTA,
     WorkFamily,
+    SocialQR,
     Footer,
   },
   data() {
