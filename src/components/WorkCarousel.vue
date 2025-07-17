@@ -6,6 +6,7 @@
         <p class="carousel-subtitle animate-fade-in-delay">
           Colocación en el día de mamparas, puertas y box de ducha en vidrio templado y esmerilado.
         </p>
+        <div class="title-divider"></div>
         <v-carousel
           ref="carousel"
           cycle
@@ -423,25 +424,27 @@ export default {
 
 
 .carousel-title {
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #1f7dca;
-  letter-spacing: -1px;
-  margin-bottom: 0.2em;
-  text-shadow: 0 4px 16px rgba(31,125,202,0.08);
-  background: linear-gradient(90deg, #1f7dca 60%, #2196f3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif !important;
+  color: #2A3B5D !important;
+  font-weight: 600 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.5px;
 }
 
 .carousel-subtitle {
-  font-family: 'Roboto', 'Montserrat', sans-serif;
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 1.5em;
-  opacity: 0.85;
-  letter-spacing: 0.2px;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+  color: #2d3436;
+  margin-top: 0.5rem;
+}
+
+.title-divider {
+  width: 60px;
+  height: 3px;
+  background: #2196F3;
+  margin: 1.5rem auto;
+  border-radius: 2px;
 }
 
 /* Animaciones */

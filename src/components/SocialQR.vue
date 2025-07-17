@@ -5,8 +5,9 @@
       <v-col cols="12" class="text-center mb-6">
         <h2 class="section-title">Conecta con Nosotros</h2>
         <p class="section-subtitle mt-3">
-          Escanea nuestros códigos QR para contactarnos directamente o seguirnos en nuestras redes sociales.
+          Escanea nuestros códigos <strong>QR</strong> para contactarnos directamente o seguirnos en nuestras redes sociales.
         </p>
+        <div class="title-divider"></div>
       </v-col>
     </v-row>
 
@@ -117,18 +118,27 @@ export default {
 <style scoped>
 /* ESTILOS GENERALES */
 .section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #0D2E5C;
+  font-family: 'Poppins', sans-serif !important;
+  color: #2A3B5D !important;
+  font-weight: 600 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.5px;
 }
 
 .section-subtitle {
-  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
   color: #2d3436;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.8;
+  margin-top: 0.5rem;
+}
+
+.title-divider {
+  width: 60px;
+  height: 3px;
+  background: #2196F3;
+  margin: 1.5rem auto;
+  border-radius: 2px;
 }
 
 /* TARJETAS DE REDES SOCIALES */
