@@ -14,6 +14,7 @@
         <PayCard class="pay-card" />
         <CallToAction class="call-to-action" />
         <GalleryCTA id="proyectos" class="gallery-cta" />
+        <WorkCarousel id="trabajos" class="work-carousel" />
         <WorkFamily class="work-family" />
         <SocialQR class="social-qr" />
       </template>
@@ -22,6 +23,7 @@
     </v-main>
 
     <Footer class="footer" />
+    <CookieBanner />
   </v-app>
 </template>
 
@@ -32,10 +34,12 @@ import CallToAction from './components/CallToAction.vue';
 import PhotoCarousel from './components/PhotoCarousel.vue';
 import Service from './components/Service.vue';
 import PayCard from './components/PayCard.vue';
+import WorkCarousel from './components/WorkCarousel.vue';
 import GalleryCTA from './components/GalleryCTA.vue';
 import WorkFamily from './components/WorkFamily.vue';
 import SocialQR from './components/SocialQR.vue';
 import Footer from './components/Footer.vue';
+import CookieBanner from './components/CookieBanner.vue';
 
 export default {
   name: 'App',
@@ -46,10 +50,12 @@ export default {
     PhotoCarousel,
     Service,
     PayCard,
+    WorkCarousel,
     GalleryCTA,
     WorkFamily,
     SocialQR,
     Footer,
+    CookieBanner
   },
   data() {
     return {
@@ -97,6 +103,7 @@ export default {
 .service,
 .pay-card,
 .call-to-action,
+.work-carousel,
 .gallery-cta,
 .work-family {
   margin-bottom: 100px;
@@ -114,6 +121,7 @@ export default {
   .service,
   .pay-card,
   .call-to-action,
+  .work-carousel,
   .gallery-cta,
   .work-family {
     margin-bottom: 80px;
@@ -126,6 +134,7 @@ export default {
   .service,
   .pay-card,
   .call-to-action,
+  .work-carousel,
   .gallery-cta,
   .work-family {
     margin-bottom: 60px;
@@ -138,6 +147,7 @@ export default {
   .service,
   .pay-card,
   .call-to-action,
+  .work-carousel,
   .gallery-cta,
   .work-family {
     margin-bottom: 40px;
