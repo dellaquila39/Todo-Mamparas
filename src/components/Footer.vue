@@ -110,14 +110,15 @@
         
         <v-col cols="12" md="6" class="developer-credit">
           <span class="credit-text">
-            Desarrollado por Agustin Dell Aquila
+            Desarrollado y Pensado por
             <a 
             href="https://wa.me/5491138185204" 
               target="_blank" 
               class="developer-link"
             >
-              Della Dev Studio
+              Della
             </a>
+            ¡Para contactarnos haga click en el Enlace!
           </span>
         </v-col>
       </v-row>

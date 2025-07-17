@@ -77,7 +77,7 @@ export default {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: rgba(26, 51, 90, 0.918);
+  color: #2196F3;
   font-size: 2.5rem;
 }
 
