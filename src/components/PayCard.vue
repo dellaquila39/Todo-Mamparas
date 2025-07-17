@@ -2,7 +2,7 @@
   <v-container class="payment-container">
     <v-row class="justify-center">
       <v-col cols="12" class="text-center mb-4">
-        <h2 class="payment-title primary--text">Medios de Pago</h2>
+        <h2 class="payment-title">Medios de Pago</h2>
         <p class="payment-subtitle">Aceptamos múltiples formas de pago para tu comodidad</p>
         <div class="title-divider"></div>
       </v-col>
@@ -116,6 +116,7 @@ n
 
 .payment-title {
   font-family: 'Poppins', sans-serif !important;
+  color: #2A3B5D !important;
   font-weight: 600 !important;
   font-size: 2.5rem !important;
   letter-spacing: -0.5px;
@@ -125,7 +126,7 @@ n
   font-family: 'Poppins', sans-serif !important;
   font-weight: 400 !important;
   font-size: 1.1rem !important;
-  color: #666;
+  color: #2d3436;
   margin-top: 0.5rem;
 }
 

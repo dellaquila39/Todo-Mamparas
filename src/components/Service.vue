@@ -1,8 +1,11 @@
 <template>
   <v-container class="service-container">
-
-    <h1 class="text-center modern-title">SERVICIOS</h1>
     <v-row justify="center">
+      <v-col cols="12" class="text-center mb-6">
+        <h1 class="text-center modern-title">Servicios</h1>
+        <p class="parrafo-subtitle">Conoce nuestros servicios personalizados para vidrios y mamparas.</p>
+        <div class="title-divider"></div>
+      </v-col>
       <v-col
         v-for="(service, index) in services"
         :key="index"
@@ -73,12 +76,27 @@ export default {
 }
 
 .modern-title {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #2196F3;
-  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif !important;
+  color: #2A3B5D !important;
+  font-weight: 600 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.5px;
+}
+
+.parrafo-subtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+  color: #2d3436;
+  margin-top: 0.5rem;
+}
+
+.title-divider {
+  width: 60px;
+  height: 3px;
+  background: #2196F3;
+  margin: 1.5rem auto;
+  border-radius: 2px;
 }
 
 .service-card {
